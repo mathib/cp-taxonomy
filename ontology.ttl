@@ -1,0 +1,431 @@
+# baseURI: https://w3id.org/con-tax/properties/cp
+# prefix: cp
+
+@prefix : <https://w3id.org/con-tax/properties/cp#> .
+@prefix aat: <http://vocab.getty.edu/aat/> .
+@prefix bot: <https://w3id.org/bot#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix contax: <https://w3id.org/con-tax#> .
+@prefix cp: <https://w3id.org/con-tax/properties/cp#> .
+@prefix cto: <https://w3id.org/cto#> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dot: <https://w3id.org/dot#> .
+@prefix gvp: <http://vocab.getty.edu/ontology#> .
+@prefix iso-thes: <http://purl.org/iso25964/skos-thes#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+schema:domainIncludes
+  rdf:type owl:AnnotationProperty ;
+.
+bot:Element
+  rdf:type owl:Class ;
+.
+bot:Zone
+  rdf:type owl:Class ;
+.
+contax:property_DP
+  rdf:type owl:DatatypeProperty ;
+.
+contax:property_OP
+  rdf:type owl:ObjectProperty ;
+.
+<https://w3id.org/con-tax/properties/cp>
+  rdf:type voaf:Vocabulary ;
+  rdf:type owl:Ontology ;
+  cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dcterms:creator [
+      rdf:type vcard:Individual ;
+      vcard:family-name "Bonduel" ;
+      vcard:fn "Mathias Bonduel" ;
+      vcard:given-name "Mathias" ;
+      vcard:hasOrganizationName [
+          rdf:type vcard:Organization ;
+          owl:sameAs dbr:Katholieke_Universiteit_Leuven ;
+          vcard:hasURL <https://www.kuleuven.be> ;
+          vcard:organization-name "KU Leuven" ;
+        ] ;
+      vcard:hasURL <https://orcid.org/0000-0002-3313-924X> ;
+      vcard:hasURL <https://www.kuleuven.be/wieiswie/nl/person/00110827> ;
+      vcard:hasURL <https://www.researchgate.net/profile/Mathias_Bonduel> ;
+    ] ;
+  dcterms:description "A set of properties that can be used to describe aspects related to general construction components, spatial building zones, materials,  building interfaces, damages, assessments and tasks."@en ;
+  dcterms:issued "2020-11-30"^^xsd:date ;
+  dcterms:title "Construction Properties (CP) taxonomy"@en ;
+  vann:preferredNamespacePrefix "cp" ;
+  vann:preferredNamespaceUri "https://w3id.org/con-tax/properties/cp#" ;
+  rdfs:comment "- Version 0.0.1: initial version"@en ;
+  owl:versionInfo "0.0.1" ;
+.
+cp:Assessment
+  rdf:type owl:Class ;
+  rdfs:comment "An instance of cp:Assessment represents an assessment related to a certain construction-related object (building, bridge, space, component, etc.), connected with the cp:hasAssessment property. Starting from an assessment node, one or more assessment parameters can be connected."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "assessment "@en ;
+.
+cp:assessmentFromInspection
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Additional property to connect an assessment node (between an assessed object and the assessed value) to the related inspection. It can be considered metadata for the assessment. Property inspired by Monumentenwacht reports and the DOT extension DASB."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "assessment from inspection"@en ;
+  rdfs:range dot:Inspection ;
+.
+cp:assessmentScore
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Property to connect a node representing an assessment (node with incoming cp:hasAssessment relation from an assessed object), towards its assessment score. More specific subproperties have to be defined in ontology extensions to specify the assessed aspect and the applied scoring system. Property inspired by Monumentenwacht reports and the DOT extension DASB."@en ;
+  rdfs:domain cp:Assessment ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:subPropertyOf contax:property_DP ;
+.
+cp:countedVisitors
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Quantitative property to indicate the number of counted visitors of a building zone. The starting and ending of the counting is indicated with a metadata property prov:startedAtTime and prov:endedAtTime. Property definition inspired by interviews with built heritage stakeholders."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "counted visitors"@en ;
+  rdfs:subPropertyOf contax:property_OP ;
+  contax:domainOrSubjectIncludes bot:Zone ;
+  contax:rangeOrObjectIncludes xsd:integer ;
+.
+cp:createdBy
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Property to indicate that a construction task is defined by a certain person or organization."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "created by"@en ;
+  rdfs:subPropertyOf cp:relatedPersonOrOrganization ;
+  contax:domainOrSubjectIncludes cto:Task ;
+  contax:domainOrSubjectIncludes cto:TaskMethod ;
+  contax:rangeOrObjectIncludes vcard:Individual ;
+  contax:rangeOrObjectIncludes vcard:Organization ;
+.
+cp:hasArea
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Quantitative property to indicate the area of a building interface (connection between building zones, between a building zone and a building element or between two building elements) or a spatial building zone."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "has area"@en ;
+  rdfs:subPropertyOf contax:property_OP ;
+  contax:domainOrSubjectIncludes bot:Interface ;
+  contax:domainOrSubjectIncludes bot:Zone ;
+  contax:rangeOrObjectIncludes xsd:double ;
+.
+cp:hasAssessment
+  rdf:type owl:ObjectProperty ;
+  schema:domainIncludes bot:Element ;
+  schema:domainIncludes bot:Zone ;
+  schema:domainIncludes dot:Damage ;
+  rdfs:comment "A property to connect an assessed object (construction component, spatial zone or damage) to an assessment node. The assessment node can be connected to (1) its assessment score(s) using (subproperties of) cp:assessmentScore and (2) the inspection context of the said assessment using cp:assessmentFromInspection. Property inspired by Monumentenwacht reports and the DOT extension DASB."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "has assessment"@en ;
+  rdfs:range cp:Assessment ;
+.
+cp:hasCeilingArea
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Quantitative property to indicate the ceiling area of a spatial building zone."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "has floor area"@en ;
+  rdfs:subPropertyOf cp:hasArea ;
+  contax:domainOrSubjectIncludes bot:Zone ;
+  contax:rangeOrObjectIncludes xsd:double ;
+.
+cp:hasContractor
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Property to indicate that a construction task is assigned to a contractor."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "has contractor"@en ;
+  rdfs:subPropertyOf cp:relatedPersonOrOrganization ;
+  contax:domainOrSubjectIncludes cto:Task ;
+  contax:rangeOrObjectIncludes vcard:Individual ;
+  contax:rangeOrObjectIncludes vcard:Organization ;
+.
+cp:hasCrackLength
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Quantitative property to indicate the length of a crack (damage element). It corresponds with the distance along the crack. This property is inspired by the cdo:crackLengthproperty in the Concrete Damage Ontology (CDO) extension of DOT."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "has crack length"@en ;
+  rdfs:subPropertyOf contax:property_OP ;
+  contax:domainOrSubjectIncludes dot:DamageElement ;
+  contax:rangeOrObjectIncludes xsd:double ;
+.
+cp:hasCrackSpacing
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Quantitative property to indicate the spacing between cracks (damage element). This property is inspired by the cdo:crackSpacing property in the Concrete Damage Ontology (CDO) extension of DOT."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "has crack spacing"@en ;
+  rdfs:subPropertyOf contax:property_OP ;
+  contax:domainOrSubjectIncludes dot:DamageElement ;
+  contax:rangeOrObjectIncludes xsd:double ;
+.
+cp:hasCrackWidth
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Quantitative property to indicate the width of crack (damage element). This property is inspired by the cdo:crackWidth property in the Concrete Damage Ontology (CDO) extension of DOT."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "has crack width"@en ;
+  rdfs:subPropertyOf contax:property_OP ;
+  contax:domainOrSubjectIncludes dot:DamageElement ;
+  contax:rangeOrObjectIncludes xsd:double ;
+.
+cp:hasDamageSurfaceSize
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Quantitative property to indicate the surface size of a dot:DamageArea, e.g. concrete spalling or (surface) deterioration by mould. This property is inspired by the cdo:spallingArea property in the Concrete Damage Ontology (CDO) extension of DOT."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "has damage surface size"@en ;
+  rdfs:subPropertyOf contax:property_OP ;
+  contax:domainOrSubjectIncludes dot:DamageArea ;
+  contax:rangeOrObjectIncludes xsd:double ;
+.
+cp:hasDamageVolumeSize
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Quantitative property to indicate the volume size of a dot:DamageArea, e.g. a concrete spalling or deterioration by mould. This property is inspired by the cdo:spallingArea property in the Concrete Damage Ontology (CDO) extension of DOT."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "has damage volume size"@en ;
+  rdfs:subPropertyOf contax:property_OP ;
+  contax:domainOrSubjectIncludes dot:DamageArea ;
+  contax:rangeOrObjectIncludes xsd:double ;
+.
+cp:hasDepth
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Quantitative property to indicate the depth of a spatial building zone or a construction component. It corresponds with the horizontal distance different from the width. E.g. the depth (or thickness) of a window."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "has depth"@en ;
+  rdfs:subPropertyOf contax:property_OP ;
+  contax:domainOrSubjectIncludes bot:Element ;
+  contax:domainOrSubjectIncludes bot:Zone ;
+  contax:domainOrSubjectIncludes contax:ConstructionComponent ;
+  contax:rangeOrObjectIncludes xsd:double ;
+.
+cp:hasDiameter
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Quantitative property to indicate the diameter of a cylinderical construction component."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "has diameter"@en ;
+  rdfs:subPropertyOf contax:property_OP ;
+  contax:domainOrSubjectIncludes bot:Element ;
+  contax:domainOrSubjectIncludes contax:ConstructionComponent ;
+  contax:rangeOrObjectIncludes xsd:double ;
+.
+cp:hasExternalPart
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Boolean property to indicate if a construction component has a part that is adjacent to the outdoor. Property definition inspired by interviews with built heritage stakeholders."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "has external part"@en ;
+  rdfs:subPropertyOf contax:property_OP ;
+  contax:domainOrSubjectIncludes bot:Element ;
+  contax:rangeOrObjectIncludes xsd:boolean ;
+.
+cp:hasFloorArea
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Quantitative property to indicate the floor area of a spatial building zone."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "has floor area"@en ;
+  rdfs:subPropertyOf cp:hasArea ;
+  contax:domainOrSubjectIncludes bot:Zone ;
+  contax:rangeOrObjectIncludes xsd:double ;
+.
+cp:hasHeight
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Quantitative property to indicate the height of a spatial building zone or a construction component. E.g. the height of a building space is equal to the distance between the floor and the ceiling."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "has height"@en ;
+  rdfs:subPropertyOf contax:property_OP ;
+  contax:domainOrSubjectIncludes bot:Element ;
+  contax:domainOrSubjectIncludes bot:Zone ;
+  contax:domainOrSubjectIncludes contax:ConstructionComponent ;
+  contax:rangeOrObjectIncludes xsd:double ;
+.
+cp:hasJanitor
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Property to indicate a janitor relation between a spatial building zone and a person or organization. Property definition inspired by interviews with built heritage stakeholders."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "has janitor"@en ;
+  rdfs:subPropertyOf cp:relatedPersonOrOrganization ;
+  contax:domainOrSubjectIncludes bot:Zone ;
+  contax:rangeOrObjectIncludes vcard:Individual ;
+  contax:rangeOrObjectIncludes vcard:Organization ;
+.
+cp:hasMaterialPart
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Property to connect a construction component to a node that represents a certain specified material (instance node classified using a subclass of contax:Material). Note that the material instance node can have its own situation-specific properties, such as volume, mass and measured material properties. Property definition inspired by interviews with built heritage stakeholders."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "has material part"@en ;
+  rdfs:subPropertyOf contax:property_OP ;
+  contax:domainOrSubjectIncludes bot:Element ;
+  contax:domainOrSubjectIncludes contax:ConstructionComponent ;
+  contax:rangeOrObjectIncludes contax:Material ;
+.
+cp:hasOwner
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Property to indicate an owner relation between a spatial building zone and a person or organization. Property definition inspired by interviews with built heritage stakeholders."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "has owner"@en ;
+  rdfs:subPropertyOf cp:relatedPersonOrOrganization ;
+  contax:domainOrSubjectIncludes bot:Zone ;
+  contax:rangeOrObjectIncludes vcard:Individual ;
+  contax:rangeOrObjectIncludes vcard:Organization ;
+.
+cp:hasProprietor
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Property to indicate a proprietor relation between a spatial building zone and a person or organization. Property definition inspired by interviews with built heritage stakeholders."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "has proprietor"@en ;
+  rdfs:subPropertyOf cp:relatedPersonOrOrganization ;
+  contax:domainOrSubjectIncludes bot:Zone ;
+  contax:rangeOrObjectIncludes vcard:Individual ;
+  contax:rangeOrObjectIncludes vcard:Organization ;
+.
+cp:hasSurfaceColor
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Property to indicate the surface color of a construction component using a six digit hexadecimal code. Property definition inspired by interviews with built heritage stakeholders."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "has surface color"@en ;
+  rdfs:subPropertyOf contax:property_OP ;
+  contax:domainOrSubjectIncludes bot:Element ;
+  contax:domainOrSubjectIncludes contax:ConstructionComponent ;
+.
+cp:hasTenant
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Property to indicate an tenant relation between a spatial building zone and a person or organization. Property definition inspired by interviews with built heritage stakeholders."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "has tenant"@en ;
+  rdfs:subPropertyOf cp:relatedPersonOrOrganization ;
+  contax:domainOrSubjectIncludes bot:Zone ;
+  contax:rangeOrObjectIncludes vcard:Individual ;
+  contax:rangeOrObjectIncludes vcard:Organization ;
+.
+cp:hasUser
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Property to indicate a user relation between a spatial building zone and a person or organization. Property definition inspired by interviews with built heritage stakeholders."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "has user"@en ;
+  rdfs:subPropertyOf cp:relatedPersonOrOrganization ;
+  contax:domainOrSubjectIncludes bot:Zone ;
+  contax:rangeOrObjectIncludes vcard:Individual ;
+  contax:rangeOrObjectIncludes vcard:Organization ;
+.
+cp:hasVolume
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Quantitative property to indicate the volume of a spatial building zone or a construction component."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "has volume"@en ;
+  rdfs:subPropertyOf contax:property_OP ;
+  contax:domainOrSubjectIncludes bot:Element ;
+  contax:domainOrSubjectIncludes bot:Zone ;
+  contax:domainOrSubjectIncludes contax:ConstructionComponent ;
+  contax:rangeOrObjectIncludes xsd:double ;
+.
+cp:hasWallArea
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Quantitative property to indicate the wall area of a spatial building zone."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "has floor area"@en ;
+  rdfs:subPropertyOf cp:hasArea ;
+  contax:domainOrSubjectIncludes bot:Zone ;
+  contax:rangeOrObjectIncludes xsd:double ;
+.
+cp:hasWidth
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Quantitative property to indicate the width of a spatial building zone or a construction component. It corresponds with the horizontal distance different from the depth. E.g. the width of a window."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "has width"@en ;
+  rdfs:subPropertyOf contax:property_OP ;
+  contax:domainOrSubjectIncludes bot:Element ;
+  contax:domainOrSubjectIncludes bot:Zone ;
+  contax:domainOrSubjectIncludes contax:ConstructionComponent ;
+  contax:rangeOrObjectIncludes xsd:double ;
+.
+cp:isLoadBearing
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Boolean property to indicate if a construction component is load bearing or not. Property definition inspired by interviews with built heritage stakeholders."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "is load bearing"@en ;
+  rdfs:subPropertyOf contax:property_OP ;
+  contax:domainOrSubjectIncludes bot:Element ;
+  contax:rangeOrObjectIncludes xsd:boolean ;
+.
+cp:materialCompressiveStrength
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Quantitative property to indicate the compressive strength of a construction material. Property definition inspired by interviews with built heritage stakeholders."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "compressive strength"@en ;
+  rdfs:subPropertyOf contax:property_OP ;
+  contax:domainOrSubjectIncludes contax:Material ;
+  contax:rangeOrObjectIncludes xsd:double ;
+.
+cp:materialElasticityModulus
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Quantitative property to indicate the modulus of elasticity of a construction material. Property definition inspired by interviews with built heritage stakeholders."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "material elasticity modules"@en ;
+  rdfs:subPropertyOf contax:property_OP ;
+  contax:domainOrSubjectIncludes contax:Material ;
+  contax:rangeOrObjectIncludes xsd:double ;
+.
+cp:materialHardnessMohs
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Quantitative property to indicate the hardness (Mohs scale) of a construction material. Property definition inspired by interviews with built heritage stakeholders."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "material hardness (Mohs scale)"@en ;
+  rdfs:subPropertyOf contax:property_OP ;
+  contax:domainOrSubjectIncludes contax:Material ;
+  contax:rangeOrObjectIncludes xsd:double ;
+  contax:rangeOrObjectIncludes xsd:integer ;
+.
+cp:materialHardnessVickers
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Quantitative property to indicate the hardness (Vickers scale) of a construction material. Property definition inspired by interviews with built heritage stakeholders."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "material hardness (Vickers scale)"@en ;
+  rdfs:subPropertyOf contax:property_OP ;
+  contax:domainOrSubjectIncludes contax:Material ;
+  contax:rangeOrObjectIncludes xsd:double ;
+.
+cp:materialSpecificMass
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Quantitative property to indicate the specific mass (volumetric mass density) of a construction material. Property definition inspired by interviews with built heritage stakeholders."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "material specific mass"@en ;
+  rdfs:subPropertyOf contax:property_OP ;
+  contax:domainOrSubjectIncludes contax:Material ;
+.
+cp:materialToughness
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Quantitative property to indicate the toughness of a construction material. Property definition inspired by interviews with built heritage stakeholders."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "material toughness"@en ;
+  rdfs:subPropertyOf contax:property_OP ;
+  contax:domainOrSubjectIncludes contax:Material ;
+  contax:rangeOrObjectIncludes xsd:double ;
+.
+cp:relatedPersonOrOrganization
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Property to indicate a relation between (1) a spatial construction zone or a task or task method and (2) a related person or organization. Property definition inspired by interviews with built heritage stakeholders. Properties from the W3C vCard Ontology can be applied to add more information regarding the person or organization, e.g. a name, address, telephone number, etc."@en ;
+  rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
+  rdfs:label "related person or organization"@en ;
+  rdfs:subPropertyOf contax:property_OP ;
+  contax:domainOrSubjectIncludes bot:Zone ;
+  contax:domainOrSubjectIncludes cto:Task ;
+  contax:domainOrSubjectIncludes cto:TaskMethod ;
+  contax:rangeOrObjectIncludes vcard:Individual ;
+  contax:rangeOrObjectIncludes vcard:Organization ;
+.
+cto:Task
+  rdf:type owl:Class ;
+.
+cto:TaskMethod
+  rdf:type owl:Class ;
+.
+dot:Damage
+  rdf:type owl:Class ;
+.
+dot:Inspection
+  rdf:type owl:Class ;
+.

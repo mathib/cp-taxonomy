@@ -1,0 +1,503 @@
+<https://w3id.org/con-tax/properties/cp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/con-tax/properties/cp> <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/con-tax/properties/cp> <http://purl.org/dc/terms/creator> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Individual> .
+<http://www.w3.org/2006/vcard/ns#Individual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2006/vcard/ns#family-name> "Bonduel" .
+_:genid1 <http://www.w3.org/2006/vcard/ns#fn> "Mathias Bonduel" .
+_:genid1 <http://www.w3.org/2006/vcard/ns#given-name> "Mathias" .
+_:genid1 <http://www.w3.org/2006/vcard/ns#hasOrganizationName> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Organization> .
+<http://www.w3.org/2006/vcard/ns#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid2 <http://www.w3.org/2006/vcard/ns#hasURL> <https://www.kuleuven.be> .
+_:genid2 <http://www.w3.org/2006/vcard/ns#organization-name> "KU Leuven" .
+_:genid1 <http://www.w3.org/2006/vcard/ns#hasURL> <https://orcid.org/0000-0002-3313-924X> .
+_:genid1 <http://www.w3.org/2006/vcard/ns#hasURL> <https://www.kuleuven.be/wieiswie/nl/person/00110827> .
+_:genid1 <http://www.w3.org/2006/vcard/ns#hasURL> <https://www.researchgate.net/profile/Mathias_Bonduel> .
+<https://w3id.org/con-tax/properties/cp> <http://purl.org/dc/terms/description> "A set of properties that can be used to describe aspects related to general construction components, spatial building zones, materials,  building interfaces, damages, assessments and tasks."@en .
+<https://w3id.org/con-tax/properties/cp> <http://purl.org/dc/terms/issued> "2020-11-30"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/con-tax/properties/cp> <http://purl.org/dc/terms/title> "Construction Properties (CP) taxonomy"@en .
+<https://w3id.org/con-tax/properties/cp> <http://purl.org/vocab/vann/preferredNamespacePrefix> "cp" .
+<https://w3id.org/con-tax/properties/cp> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/con-tax/properties/cp#" .
+<https://w3id.org/con-tax/properties/cp> <http://www.w3.org/2000/01/rdf-schema#comment> "- Version 0.0.1: initial version"@en .
+<https://w3id.org/con-tax/properties/cp> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/domainIncludes
+<http://schema.org/domainIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2006/vcard/ns#family-name
+<http://www.w3.org/2006/vcard/ns#family-name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2006/vcard/ns#fn
+<http://www.w3.org/2006/vcard/ns#fn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2006/vcard/ns#given-name
+<http://www.w3.org/2006/vcard/ns#given-name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2006/vcard/ns#hasOrganizationName
+<http://www.w3.org/2006/vcard/ns#hasOrganizationName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2006/vcard/ns#hasURL
+<http://www.w3.org/2006/vcard/ns#hasURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2006/vcard/ns#organization-name
+<http://www.w3.org/2006/vcard/ns#organization-name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/con-tax#domainOrSubjectIncludes
+<https://w3id.org/con-tax#domainOrSubjectIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/con-tax#rangeOrObjectIncludes
+<https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/con-tax#property_OP
+<https://w3id.org/con-tax#property_OP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/con-tax/properties/cp#assessmentFromInspection
+<https://w3id.org/con-tax/properties/cp#assessmentFromInspection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#assessmentFromInspection> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dot#Inspection> .
+<https://w3id.org/con-tax/properties/cp#assessmentFromInspection> <http://www.w3.org/2000/01/rdf-schema#comment> "Additional property to connect an assessment node (between an assessed object and the assessed value) to the related inspection. It can be considered metadata for the assessment. Property inspired by Monumentenwacht reports and the DOT extension DASB."@en .
+<https://w3id.org/con-tax/properties/cp#assessmentFromInspection> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#assessmentFromInspection> <http://www.w3.org/2000/01/rdf-schema#label> "assessment from inspection"@en .
+# 
+# https://w3id.org/con-tax/properties/cp#countedVisitors
+<https://w3id.org/con-tax/properties/cp#countedVisitors> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#countedVisitors> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax#property_OP> .
+<https://w3id.org/con-tax/properties/cp#countedVisitors> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative property to indicate the number of counted visitors of a building zone. The starting and ending of the counting is indicated with a metadata property prov:startedAtTime and prov:endedAtTime. Property definition inspired by interviews with built heritage stakeholders."@en .
+<https://w3id.org/con-tax/properties/cp#countedVisitors> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#countedVisitors> <http://www.w3.org/2000/01/rdf-schema#label> "counted visitors"@en .
+<https://w3id.org/con-tax/properties/cp#countedVisitors> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/bot#Zone> .
+<https://w3id.org/con-tax/properties/cp#countedVisitors> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://w3id.org/con-tax/properties/cp#createdBy
+<https://w3id.org/con-tax/properties/cp#createdBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#createdBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax/properties/cp#relatedPersonOrOrganization> .
+<https://w3id.org/con-tax/properties/cp#createdBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Property to indicate that a construction task is defined by a certain person or organization."@en .
+<https://w3id.org/con-tax/properties/cp#createdBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#createdBy> <http://www.w3.org/2000/01/rdf-schema#label> "created by"@en .
+<https://w3id.org/con-tax/properties/cp#createdBy> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/cto#Task> .
+<https://w3id.org/con-tax/properties/cp#createdBy> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/cto#TaskMethod> .
+<https://w3id.org/con-tax/properties/cp#createdBy> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2006/vcard/ns#Individual> .
+<https://w3id.org/con-tax/properties/cp#createdBy> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2006/vcard/ns#Organization> .
+# 
+# https://w3id.org/con-tax/properties/cp#hasArea
+<https://w3id.org/con-tax/properties/cp#hasArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#hasArea> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax#property_OP> .
+<https://w3id.org/con-tax/properties/cp#hasArea> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative property to indicate the area of a building interface (connection between building zones, between a building zone and a building element or between two building elements) or a spatial building zone."@en .
+<https://w3id.org/con-tax/properties/cp#hasArea> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#hasArea> <http://www.w3.org/2000/01/rdf-schema#label> "has area"@en .
+<https://w3id.org/con-tax/properties/cp#hasArea> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/bot#Interface> .
+<https://w3id.org/con-tax/properties/cp#hasArea> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/bot#Zone> .
+<https://w3id.org/con-tax/properties/cp#hasArea> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# https://w3id.org/con-tax/properties/cp#hasAssessment
+<https://w3id.org/con-tax/properties/cp#hasAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#hasAssessment> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/con-tax/properties/cp#Assessment> .
+<https://w3id.org/con-tax/properties/cp#hasAssessment> <http://schema.org/domainIncludes> <https://w3id.org/bot#Element> .
+<https://w3id.org/con-tax/properties/cp#hasAssessment> <http://schema.org/domainIncludes> <https://w3id.org/bot#Zone> .
+<https://w3id.org/con-tax/properties/cp#hasAssessment> <http://schema.org/domainIncludes> <https://w3id.org/dot#Damage> .
+<https://w3id.org/con-tax/properties/cp#hasAssessment> <http://www.w3.org/2000/01/rdf-schema#comment> "A property to connect an assessed object (construction component, spatial zone or damage) to an assessment node. The assessment node can be connected to (1) its assessment score(s) using (subproperties of) cp:assessmentScore and (2) the inspection context of the said assessment using cp:assessmentFromInspection. Property inspired by Monumentenwacht reports and the DOT extension DASB."@en .
+<https://w3id.org/con-tax/properties/cp#hasAssessment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#hasAssessment> <http://www.w3.org/2000/01/rdf-schema#label> "has assessment"@en .
+# 
+# https://w3id.org/con-tax/properties/cp#hasCeilingArea
+<https://w3id.org/con-tax/properties/cp#hasCeilingArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#hasCeilingArea> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax/properties/cp#hasArea> .
+<https://w3id.org/con-tax/properties/cp#hasCeilingArea> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative property to indicate the ceiling area of a spatial building zone."@en .
+<https://w3id.org/con-tax/properties/cp#hasCeilingArea> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#hasCeilingArea> <http://www.w3.org/2000/01/rdf-schema#label> "has floor area"@en .
+<https://w3id.org/con-tax/properties/cp#hasCeilingArea> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/bot#Zone> .
+<https://w3id.org/con-tax/properties/cp#hasCeilingArea> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# https://w3id.org/con-tax/properties/cp#hasContractor
+<https://w3id.org/con-tax/properties/cp#hasContractor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#hasContractor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax/properties/cp#relatedPersonOrOrganization> .
+<https://w3id.org/con-tax/properties/cp#hasContractor> <http://www.w3.org/2000/01/rdf-schema#comment> "Property to indicate that a construction task is assigned to a contractor."@en .
+<https://w3id.org/con-tax/properties/cp#hasContractor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#hasContractor> <http://www.w3.org/2000/01/rdf-schema#label> "has contractor"@en .
+<https://w3id.org/con-tax/properties/cp#hasContractor> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/cto#Task> .
+<https://w3id.org/con-tax/properties/cp#hasContractor> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2006/vcard/ns#Individual> .
+<https://w3id.org/con-tax/properties/cp#hasContractor> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2006/vcard/ns#Organization> .
+# 
+# https://w3id.org/con-tax/properties/cp#hasCrackLength
+<https://w3id.org/con-tax/properties/cp#hasCrackLength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#hasCrackLength> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax#property_OP> .
+<https://w3id.org/con-tax/properties/cp#hasCrackLength> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative property to indicate the length of a crack (damage element). It corresponds with the distance along the crack. This property is inspired by the cdo:crackLengthproperty in the Concrete Damage Ontology (CDO) extension of DOT."@en .
+<https://w3id.org/con-tax/properties/cp#hasCrackLength> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#hasCrackLength> <http://www.w3.org/2000/01/rdf-schema#label> "has crack length"@en .
+<https://w3id.org/con-tax/properties/cp#hasCrackLength> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/dot#DamageElement> .
+<https://w3id.org/con-tax/properties/cp#hasCrackLength> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# https://w3id.org/con-tax/properties/cp#hasCrackSpacing
+<https://w3id.org/con-tax/properties/cp#hasCrackSpacing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#hasCrackSpacing> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax#property_OP> .
+<https://w3id.org/con-tax/properties/cp#hasCrackSpacing> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative property to indicate the spacing between cracks (damage element). This property is inspired by the cdo:crackSpacing property in the Concrete Damage Ontology (CDO) extension of DOT."@en .
+<https://w3id.org/con-tax/properties/cp#hasCrackSpacing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#hasCrackSpacing> <http://www.w3.org/2000/01/rdf-schema#label> "has crack spacing"@en .
+<https://w3id.org/con-tax/properties/cp#hasCrackSpacing> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/dot#DamageElement> .
+<https://w3id.org/con-tax/properties/cp#hasCrackSpacing> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# https://w3id.org/con-tax/properties/cp#hasCrackWidth
+<https://w3id.org/con-tax/properties/cp#hasCrackWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#hasCrackWidth> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax#property_OP> .
+<https://w3id.org/con-tax/properties/cp#hasCrackWidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative property to indicate the width of crack (damage element). This property is inspired by the cdo:crackWidth property in the Concrete Damage Ontology (CDO) extension of DOT."@en .
+<https://w3id.org/con-tax/properties/cp#hasCrackWidth> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#hasCrackWidth> <http://www.w3.org/2000/01/rdf-schema#label> "has crack width"@en .
+<https://w3id.org/con-tax/properties/cp#hasCrackWidth> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/dot#DamageElement> .
+<https://w3id.org/con-tax/properties/cp#hasCrackWidth> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# https://w3id.org/con-tax/properties/cp#hasDamageSurfaceSize
+<https://w3id.org/con-tax/properties/cp#hasDamageSurfaceSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#hasDamageSurfaceSize> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax#property_OP> .
+<https://w3id.org/con-tax/properties/cp#hasDamageSurfaceSize> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative property to indicate the surface size of a dot:DamageArea, e.g. concrete spalling or (surface) deterioration by mould. This property is inspired by the cdo:spallingArea property in the Concrete Damage Ontology (CDO) extension of DOT."@en .
+<https://w3id.org/con-tax/properties/cp#hasDamageSurfaceSize> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#hasDamageSurfaceSize> <http://www.w3.org/2000/01/rdf-schema#label> "has damage surface size"@en .
+<https://w3id.org/con-tax/properties/cp#hasDamageSurfaceSize> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/dot#DamageArea> .
+<https://w3id.org/con-tax/properties/cp#hasDamageSurfaceSize> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# https://w3id.org/con-tax/properties/cp#hasDamageVolumeSize
+<https://w3id.org/con-tax/properties/cp#hasDamageVolumeSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#hasDamageVolumeSize> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax#property_OP> .
+<https://w3id.org/con-tax/properties/cp#hasDamageVolumeSize> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative property to indicate the volume size of a dot:DamageArea, e.g. a concrete spalling or deterioration by mould. This property is inspired by the cdo:spallingArea property in the Concrete Damage Ontology (CDO) extension of DOT."@en .
+<https://w3id.org/con-tax/properties/cp#hasDamageVolumeSize> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#hasDamageVolumeSize> <http://www.w3.org/2000/01/rdf-schema#label> "has damage volume size"@en .
+<https://w3id.org/con-tax/properties/cp#hasDamageVolumeSize> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/dot#DamageArea> .
+<https://w3id.org/con-tax/properties/cp#hasDamageVolumeSize> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# https://w3id.org/con-tax/properties/cp#hasDepth
+<https://w3id.org/con-tax/properties/cp#hasDepth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#hasDepth> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax#property_OP> .
+<https://w3id.org/con-tax/properties/cp#hasDepth> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative property to indicate the depth of a spatial building zone or a construction component. It corresponds with the horizontal distance different from the width. E.g. the depth (or thickness) of a window."@en .
+<https://w3id.org/con-tax/properties/cp#hasDepth> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#hasDepth> <http://www.w3.org/2000/01/rdf-schema#label> "has depth"@en .
+<https://w3id.org/con-tax/properties/cp#hasDepth> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/bot#Element> .
+<https://w3id.org/con-tax/properties/cp#hasDepth> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/bot#Zone> .
+<https://w3id.org/con-tax/properties/cp#hasDepth> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/con-tax#ConstructionComponent> .
+<https://w3id.org/con-tax/properties/cp#hasDepth> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# https://w3id.org/con-tax/properties/cp#hasDiameter
+<https://w3id.org/con-tax/properties/cp#hasDiameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#hasDiameter> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax#property_OP> .
+<https://w3id.org/con-tax/properties/cp#hasDiameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative property to indicate the diameter of a cylinderical construction component."@en .
+<https://w3id.org/con-tax/properties/cp#hasDiameter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#hasDiameter> <http://www.w3.org/2000/01/rdf-schema#label> "has diameter"@en .
+<https://w3id.org/con-tax/properties/cp#hasDiameter> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/bot#Element> .
+<https://w3id.org/con-tax/properties/cp#hasDiameter> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/con-tax#ConstructionComponent> .
+<https://w3id.org/con-tax/properties/cp#hasDiameter> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# https://w3id.org/con-tax/properties/cp#hasExternalPart
+<https://w3id.org/con-tax/properties/cp#hasExternalPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#hasExternalPart> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax#property_OP> .
+<https://w3id.org/con-tax/properties/cp#hasExternalPart> <http://www.w3.org/2000/01/rdf-schema#comment> "Boolean property to indicate if a construction component has a part that is adjacent to the outdoor. Property definition inspired by interviews with built heritage stakeholders."@en .
+<https://w3id.org/con-tax/properties/cp#hasExternalPart> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#hasExternalPart> <http://www.w3.org/2000/01/rdf-schema#label> "has external part"@en .
+<https://w3id.org/con-tax/properties/cp#hasExternalPart> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/bot#Element> .
+<https://w3id.org/con-tax/properties/cp#hasExternalPart> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://w3id.org/con-tax/properties/cp#hasFloorArea
+<https://w3id.org/con-tax/properties/cp#hasFloorArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#hasFloorArea> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax/properties/cp#hasArea> .
+<https://w3id.org/con-tax/properties/cp#hasFloorArea> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative property to indicate the floor area of a spatial building zone."@en .
+<https://w3id.org/con-tax/properties/cp#hasFloorArea> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#hasFloorArea> <http://www.w3.org/2000/01/rdf-schema#label> "has floor area"@en .
+<https://w3id.org/con-tax/properties/cp#hasFloorArea> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/bot#Zone> .
+<https://w3id.org/con-tax/properties/cp#hasFloorArea> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# https://w3id.org/con-tax/properties/cp#hasHeight
+<https://w3id.org/con-tax/properties/cp#hasHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#hasHeight> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax#property_OP> .
+<https://w3id.org/con-tax/properties/cp#hasHeight> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative property to indicate the height of a spatial building zone or a construction component. E.g. the height of a building space is equal to the distance between the floor and the ceiling."@en .
+<https://w3id.org/con-tax/properties/cp#hasHeight> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#hasHeight> <http://www.w3.org/2000/01/rdf-schema#label> "has height"@en .
+<https://w3id.org/con-tax/properties/cp#hasHeight> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/bot#Element> .
+<https://w3id.org/con-tax/properties/cp#hasHeight> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/bot#Zone> .
+<https://w3id.org/con-tax/properties/cp#hasHeight> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/con-tax#ConstructionComponent> .
+<https://w3id.org/con-tax/properties/cp#hasHeight> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# https://w3id.org/con-tax/properties/cp#hasJanitor
+<https://w3id.org/con-tax/properties/cp#hasJanitor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#hasJanitor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax/properties/cp#relatedPersonOrOrganization> .
+<https://w3id.org/con-tax/properties/cp#hasJanitor> <http://www.w3.org/2000/01/rdf-schema#comment> "Property to indicate a janitor relation between a spatial building zone and a person or organization. Property definition inspired by interviews with built heritage stakeholders."@en .
+<https://w3id.org/con-tax/properties/cp#hasJanitor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#hasJanitor> <http://www.w3.org/2000/01/rdf-schema#label> "has janitor"@en .
+<https://w3id.org/con-tax/properties/cp#hasJanitor> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/bot#Zone> .
+<https://w3id.org/con-tax/properties/cp#hasJanitor> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2006/vcard/ns#Individual> .
+<https://w3id.org/con-tax/properties/cp#hasJanitor> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2006/vcard/ns#Organization> .
+# 
+# https://w3id.org/con-tax/properties/cp#hasMaterialPart
+<https://w3id.org/con-tax/properties/cp#hasMaterialPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#hasMaterialPart> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax#property_OP> .
+<https://w3id.org/con-tax/properties/cp#hasMaterialPart> <http://www.w3.org/2000/01/rdf-schema#comment> "Property to connect a construction component to a node that represents a certain specified material (instance node classified using a subclass of contax:Material). Note that the material instance node can have its own situation-specific properties, such as volume, mass and measured material properties. Property definition inspired by interviews with built heritage stakeholders."@en .
+<https://w3id.org/con-tax/properties/cp#hasMaterialPart> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#hasMaterialPart> <http://www.w3.org/2000/01/rdf-schema#label> "has material part"@en .
+<https://w3id.org/con-tax/properties/cp#hasMaterialPart> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/bot#Element> .
+<https://w3id.org/con-tax/properties/cp#hasMaterialPart> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/con-tax#ConstructionComponent> .
+<https://w3id.org/con-tax/properties/cp#hasMaterialPart> <https://w3id.org/con-tax#rangeOrObjectIncludes> <https://w3id.org/con-tax#Material> .
+# 
+# https://w3id.org/con-tax/properties/cp#hasOwner
+<https://w3id.org/con-tax/properties/cp#hasOwner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#hasOwner> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax/properties/cp#relatedPersonOrOrganization> .
+<https://w3id.org/con-tax/properties/cp#hasOwner> <http://www.w3.org/2000/01/rdf-schema#comment> "Property to indicate an owner relation between a spatial building zone and a person or organization. Property definition inspired by interviews with built heritage stakeholders."@en .
+<https://w3id.org/con-tax/properties/cp#hasOwner> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#hasOwner> <http://www.w3.org/2000/01/rdf-schema#label> "has owner"@en .
+<https://w3id.org/con-tax/properties/cp#hasOwner> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/bot#Zone> .
+<https://w3id.org/con-tax/properties/cp#hasOwner> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2006/vcard/ns#Individual> .
+<https://w3id.org/con-tax/properties/cp#hasOwner> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2006/vcard/ns#Organization> .
+# 
+# https://w3id.org/con-tax/properties/cp#hasProprietor
+<https://w3id.org/con-tax/properties/cp#hasProprietor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#hasProprietor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax/properties/cp#relatedPersonOrOrganization> .
+<https://w3id.org/con-tax/properties/cp#hasProprietor> <http://www.w3.org/2000/01/rdf-schema#comment> "Property to indicate a proprietor relation between a spatial building zone and a person or organization. Property definition inspired by interviews with built heritage stakeholders."@en .
+<https://w3id.org/con-tax/properties/cp#hasProprietor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#hasProprietor> <http://www.w3.org/2000/01/rdf-schema#label> "has proprietor"@en .
+<https://w3id.org/con-tax/properties/cp#hasProprietor> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/bot#Zone> .
+<https://w3id.org/con-tax/properties/cp#hasProprietor> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2006/vcard/ns#Individual> .
+<https://w3id.org/con-tax/properties/cp#hasProprietor> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2006/vcard/ns#Organization> .
+# 
+# https://w3id.org/con-tax/properties/cp#hasSurfaceColor
+<https://w3id.org/con-tax/properties/cp#hasSurfaceColor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#hasSurfaceColor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax#property_OP> .
+<https://w3id.org/con-tax/properties/cp#hasSurfaceColor> <http://www.w3.org/2000/01/rdf-schema#comment> "Property to indicate the surface color of a construction component using a six digit hexadecimal code. Property definition inspired by interviews with built heritage stakeholders."@en .
+<https://w3id.org/con-tax/properties/cp#hasSurfaceColor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#hasSurfaceColor> <http://www.w3.org/2000/01/rdf-schema#label> "has surface color"@en .
+<https://w3id.org/con-tax/properties/cp#hasSurfaceColor> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/bot#Element> .
+<https://w3id.org/con-tax/properties/cp#hasSurfaceColor> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/con-tax#ConstructionComponent> .
+# 
+# https://w3id.org/con-tax/properties/cp#hasTenant
+<https://w3id.org/con-tax/properties/cp#hasTenant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#hasTenant> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax/properties/cp#relatedPersonOrOrganization> .
+<https://w3id.org/con-tax/properties/cp#hasTenant> <http://www.w3.org/2000/01/rdf-schema#comment> "Property to indicate an tenant relation between a spatial building zone and a person or organization. Property definition inspired by interviews with built heritage stakeholders."@en .
+<https://w3id.org/con-tax/properties/cp#hasTenant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#hasTenant> <http://www.w3.org/2000/01/rdf-schema#label> "has tenant"@en .
+<https://w3id.org/con-tax/properties/cp#hasTenant> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/bot#Zone> .
+<https://w3id.org/con-tax/properties/cp#hasTenant> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2006/vcard/ns#Individual> .
+<https://w3id.org/con-tax/properties/cp#hasTenant> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2006/vcard/ns#Organization> .
+# 
+# https://w3id.org/con-tax/properties/cp#hasUser
+<https://w3id.org/con-tax/properties/cp#hasUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#hasUser> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax/properties/cp#relatedPersonOrOrganization> .
+<https://w3id.org/con-tax/properties/cp#hasUser> <http://www.w3.org/2000/01/rdf-schema#comment> "Property to indicate a user relation between a spatial building zone and a person or organization. Property definition inspired by interviews with built heritage stakeholders."@en .
+<https://w3id.org/con-tax/properties/cp#hasUser> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#hasUser> <http://www.w3.org/2000/01/rdf-schema#label> "has user"@en .
+<https://w3id.org/con-tax/properties/cp#hasUser> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/bot#Zone> .
+<https://w3id.org/con-tax/properties/cp#hasUser> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2006/vcard/ns#Individual> .
+<https://w3id.org/con-tax/properties/cp#hasUser> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2006/vcard/ns#Organization> .
+# 
+# https://w3id.org/con-tax/properties/cp#hasVolume
+<https://w3id.org/con-tax/properties/cp#hasVolume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#hasVolume> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax#property_OP> .
+<https://w3id.org/con-tax/properties/cp#hasVolume> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative property to indicate the volume of a spatial building zone or a construction component."@en .
+<https://w3id.org/con-tax/properties/cp#hasVolume> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#hasVolume> <http://www.w3.org/2000/01/rdf-schema#label> "has volume"@en .
+<https://w3id.org/con-tax/properties/cp#hasVolume> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/bot#Element> .
+<https://w3id.org/con-tax/properties/cp#hasVolume> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/bot#Zone> .
+<https://w3id.org/con-tax/properties/cp#hasVolume> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/con-tax#ConstructionComponent> .
+<https://w3id.org/con-tax/properties/cp#hasVolume> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# https://w3id.org/con-tax/properties/cp#hasWallArea
+<https://w3id.org/con-tax/properties/cp#hasWallArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#hasWallArea> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax/properties/cp#hasArea> .
+<https://w3id.org/con-tax/properties/cp#hasWallArea> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative property to indicate the wall area of a spatial building zone."@en .
+<https://w3id.org/con-tax/properties/cp#hasWallArea> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#hasWallArea> <http://www.w3.org/2000/01/rdf-schema#label> "has floor area"@en .
+<https://w3id.org/con-tax/properties/cp#hasWallArea> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/bot#Zone> .
+<https://w3id.org/con-tax/properties/cp#hasWallArea> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# https://w3id.org/con-tax/properties/cp#hasWidth
+<https://w3id.org/con-tax/properties/cp#hasWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#hasWidth> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax#property_OP> .
+<https://w3id.org/con-tax/properties/cp#hasWidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative property to indicate the width of a spatial building zone or a construction component. It corresponds with the horizontal distance different from the depth. E.g. the width of a window."@en .
+<https://w3id.org/con-tax/properties/cp#hasWidth> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#hasWidth> <http://www.w3.org/2000/01/rdf-schema#label> "has width"@en .
+<https://w3id.org/con-tax/properties/cp#hasWidth> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/bot#Element> .
+<https://w3id.org/con-tax/properties/cp#hasWidth> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/bot#Zone> .
+<https://w3id.org/con-tax/properties/cp#hasWidth> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/con-tax#ConstructionComponent> .
+<https://w3id.org/con-tax/properties/cp#hasWidth> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# https://w3id.org/con-tax/properties/cp#isLoadBearing
+<https://w3id.org/con-tax/properties/cp#isLoadBearing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#isLoadBearing> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax#property_OP> .
+<https://w3id.org/con-tax/properties/cp#isLoadBearing> <http://www.w3.org/2000/01/rdf-schema#comment> "Boolean property to indicate if a construction component is load bearing or not. Property definition inspired by interviews with built heritage stakeholders."@en .
+<https://w3id.org/con-tax/properties/cp#isLoadBearing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#isLoadBearing> <http://www.w3.org/2000/01/rdf-schema#label> "is load bearing"@en .
+<https://w3id.org/con-tax/properties/cp#isLoadBearing> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/bot#Element> .
+<https://w3id.org/con-tax/properties/cp#isLoadBearing> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://w3id.org/con-tax/properties/cp#materialCompressiveStrength
+<https://w3id.org/con-tax/properties/cp#materialCompressiveStrength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#materialCompressiveStrength> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax#property_OP> .
+<https://w3id.org/con-tax/properties/cp#materialCompressiveStrength> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative property to indicate the compressive strength of a construction material. Property definition inspired by interviews with built heritage stakeholders."@en .
+<https://w3id.org/con-tax/properties/cp#materialCompressiveStrength> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#materialCompressiveStrength> <http://www.w3.org/2000/01/rdf-schema#label> "compressive strength"@en .
+<https://w3id.org/con-tax/properties/cp#materialCompressiveStrength> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/con-tax#Material> .
+<https://w3id.org/con-tax/properties/cp#materialCompressiveStrength> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# https://w3id.org/con-tax/properties/cp#materialElasticityModulus
+<https://w3id.org/con-tax/properties/cp#materialElasticityModulus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#materialElasticityModulus> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax#property_OP> .
+<https://w3id.org/con-tax/properties/cp#materialElasticityModulus> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative property to indicate the modulus of elasticity of a construction material. Property definition inspired by interviews with built heritage stakeholders."@en .
+<https://w3id.org/con-tax/properties/cp#materialElasticityModulus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#materialElasticityModulus> <http://www.w3.org/2000/01/rdf-schema#label> "material elasticity modules"@en .
+<https://w3id.org/con-tax/properties/cp#materialElasticityModulus> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/con-tax#Material> .
+<https://w3id.org/con-tax/properties/cp#materialElasticityModulus> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# https://w3id.org/con-tax/properties/cp#materialHardnessMohs
+<https://w3id.org/con-tax/properties/cp#materialHardnessMohs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#materialHardnessMohs> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax#property_OP> .
+<https://w3id.org/con-tax/properties/cp#materialHardnessMohs> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative property to indicate the hardness (Mohs scale) of a construction material. Property definition inspired by interviews with built heritage stakeholders."@en .
+<https://w3id.org/con-tax/properties/cp#materialHardnessMohs> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#materialHardnessMohs> <http://www.w3.org/2000/01/rdf-schema#label> "material hardness (Mohs scale)"@en .
+<https://w3id.org/con-tax/properties/cp#materialHardnessMohs> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/con-tax#Material> .
+<https://w3id.org/con-tax/properties/cp#materialHardnessMohs> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2001/XMLSchema#double> .
+<https://w3id.org/con-tax/properties/cp#materialHardnessMohs> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://w3id.org/con-tax/properties/cp#materialHardnessVickers
+<https://w3id.org/con-tax/properties/cp#materialHardnessVickers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#materialHardnessVickers> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax#property_OP> .
+<https://w3id.org/con-tax/properties/cp#materialHardnessVickers> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative property to indicate the hardness (Vickers scale) of a construction material. Property definition inspired by interviews with built heritage stakeholders."@en .
+<https://w3id.org/con-tax/properties/cp#materialHardnessVickers> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#materialHardnessVickers> <http://www.w3.org/2000/01/rdf-schema#label> "material hardness (Vickers scale)"@en .
+<https://w3id.org/con-tax/properties/cp#materialHardnessVickers> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/con-tax#Material> .
+<https://w3id.org/con-tax/properties/cp#materialHardnessVickers> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# https://w3id.org/con-tax/properties/cp#materialSpecificMass
+<https://w3id.org/con-tax/properties/cp#materialSpecificMass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#materialSpecificMass> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax#property_OP> .
+<https://w3id.org/con-tax/properties/cp#materialSpecificMass> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative property to indicate the specific mass (volumetric mass density) of a construction material. Property definition inspired by interviews with built heritage stakeholders."@en .
+<https://w3id.org/con-tax/properties/cp#materialSpecificMass> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#materialSpecificMass> <http://www.w3.org/2000/01/rdf-schema#label> "material specific mass"@en .
+<https://w3id.org/con-tax/properties/cp#materialSpecificMass> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/con-tax#Material> .
+# 
+# https://w3id.org/con-tax/properties/cp#materialToughness
+<https://w3id.org/con-tax/properties/cp#materialToughness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#materialToughness> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax#property_OP> .
+<https://w3id.org/con-tax/properties/cp#materialToughness> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative property to indicate the toughness of a construction material. Property definition inspired by interviews with built heritage stakeholders."@en .
+<https://w3id.org/con-tax/properties/cp#materialToughness> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#materialToughness> <http://www.w3.org/2000/01/rdf-schema#label> "material toughness"@en .
+<https://w3id.org/con-tax/properties/cp#materialToughness> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/con-tax#Material> .
+<https://w3id.org/con-tax/properties/cp#materialToughness> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# https://w3id.org/con-tax/properties/cp#relatedPersonOrOrganization
+<https://w3id.org/con-tax/properties/cp#relatedPersonOrOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax/properties/cp#relatedPersonOrOrganization> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax#property_OP> .
+<https://w3id.org/con-tax/properties/cp#relatedPersonOrOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "Property to indicate a relation between (1) a spatial construction zone or a task or task method and (2) a related person or organization. Property definition inspired by interviews with built heritage stakeholders. Properties from the W3C vCard Ontology can be applied to add more information regarding the person or organization, e.g. a name, address, telephone number, etc."@en .
+<https://w3id.org/con-tax/properties/cp#relatedPersonOrOrganization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#relatedPersonOrOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "related person or organization"@en .
+<https://w3id.org/con-tax/properties/cp#relatedPersonOrOrganization> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/bot#Zone> .
+<https://w3id.org/con-tax/properties/cp#relatedPersonOrOrganization> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/cto#Task> .
+<https://w3id.org/con-tax/properties/cp#relatedPersonOrOrganization> <https://w3id.org/con-tax#domainOrSubjectIncludes> <https://w3id.org/cto#TaskMethod> .
+<https://w3id.org/con-tax/properties/cp#relatedPersonOrOrganization> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2006/vcard/ns#Individual> .
+<https://w3id.org/con-tax/properties/cp#relatedPersonOrOrganization> <https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2006/vcard/ns#Organization> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/con-tax#property_DP
+<https://w3id.org/con-tax#property_DP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://w3id.org/con-tax/properties/cp#assessmentScore
+<https://w3id.org/con-tax/properties/cp#assessmentScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/con-tax/properties/cp#assessmentScore> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax#property_DP> .
+<https://w3id.org/con-tax/properties/cp#assessmentScore> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/con-tax/properties/cp#Assessment> .
+<https://w3id.org/con-tax/properties/cp#assessmentScore> <http://www.w3.org/2000/01/rdf-schema#comment> "Property to connect a node representing an assessment (node with incoming cp:hasAssessment relation from an assessed object), towards its assessment score. More specific subproperties have to be defined in ontology extensions to specify the assessed aspect and the applied scoring system. Property inspired by Monumentenwacht reports and the DOT extension DASB."@en .
+<https://w3id.org/con-tax/properties/cp#assessmentScore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/vocommons/voaf#Vocabulary
+<http://purl.org/vocommons/voaf#Vocabulary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2006/vcard/ns#Individual
+# 
+# http://www.w3.org/2006/vcard/ns#Organization
+# 
+# https://w3id.org/bot#Element
+<https://w3id.org/bot#Element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/bot#Zone
+<https://w3id.org/bot#Zone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/con-tax/properties/cp#Assessment
+<https://w3id.org/con-tax/properties/cp#Assessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/con-tax/properties/cp#Assessment> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance of cp:Assessment represents an assessment related to a certain construction-related object (building, bridge, space, component, etc.), connected with the cp:hasAssessment property. Starting from an assessment node, one or more assessment parameters can be connected."@en .
+<https://w3id.org/con-tax/properties/cp#Assessment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#Assessment> <http://www.w3.org/2000/01/rdf-schema#label> "assessment "@en .
+# 
+# https://w3id.org/cto#Task
+<https://w3id.org/cto#Task> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/cto#TaskMethod
+<https://w3id.org/cto#TaskMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/dot#Damage
+<https://w3id.org/dot#Damage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/dot#Inspection
+<https://w3id.org/dot#Inspection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://dbpedia.org/resource/Katholieke_Universiteit_Leuven
+# 
+# https://w3id.org/con-tax/properties/cp
+<https://w3id.org/con-tax/properties/cp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/con-tax/properties/cp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
