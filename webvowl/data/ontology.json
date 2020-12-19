@@ -10,7 +10,7 @@
     "version" : "0.0.1",
     "author" : [ "_:genid2147483648" ],
     "description" : {
-      "en" : "A set of properties that can be used to describe aspects related to general construction components, spatial building zones, materials,  building interfaces, damages, assessments and tasks."
+      "en" : "A set of properties that can be used to describe aspects related to general construction components, spatial building zones, materials,  building interfaces, damages, assessments and tasks. Besides two taxonomies of general properties, extending resp. contax:property_OP and contax:property_DP, it also contains terminology for the more specific patterns related to construction assessments."
     },
     "comments" : {
       "en" : "- Version 0.0.1: initial version"
@@ -34,22 +34,22 @@
         "value" : "cp",
         "type" : "label"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "https://w3id.org/con-tax/properties/cp#",
-        "type" : "label"
-      } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
         "value" : "0.0.1",
         "type" : "label"
       } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/con-tax/properties/cp#",
+        "type" : "label"
+      } ],
       "issued" : [ {
         "identifier" : "issued",
         "language" : "undefined",
-        "value" : "2020-11-30",
+        "value" : "2020-12-19",
         "type" : "label"
       } ],
       "title" : [ {
@@ -197,7 +197,7 @@
       "en" : "assessment "
     },
     "comment" : {
-      "en" : "An instance of cp:Assessment represents an assessment related to a certain construction-related object (building, bridge, space, component, etc.), connected with the cp:hasAssessment property. Starting from an assessment node, one or more assessment parameters can be connected."
+      "en" : "An instance of cp:Assessment represents an assessment related to a certain construction-related object (building, bridge, space, component, etc.), connected with the cp:hasAssessment property. Starting from an assessment node, one assessment score (cp:assessmentScore or subproperties) relation can be connected to link to the scoring value."
     },
     "id" : "16"
   }, {
@@ -291,16 +291,16 @@
     "id" : "25",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "26",
+    "id" : "2",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "2",
+    "id" : "40",
     "type" : "owl:objectProperty"
   }, {
     "id" : "41",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "27",
+    "id" : "29",
     "type" : "owl:objectProperty"
   }, {
     "id" : "42",
@@ -309,25 +309,22 @@
     "id" : "43",
     "type" : "owl:objectProperty"
   }, {
+    "id" : "31",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "32",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "33",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "37",
+    "id" : "36",
     "type" : "owl:objectProperty"
   }, {
     "id" : "19",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "29",
+    "id" : "27",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "28",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "48",
+    "id" : "26",
     "type" : "owl:objectProperty"
   }, {
     "id" : "22",
@@ -336,34 +333,37 @@
     "id" : "21",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "36",
+    "id" : "48",
     "type" : "owl:objectProperty"
   }, {
     "id" : "35",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "38",
+    "id" : "34",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "37",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "28",
     "type" : "owl:objectProperty"
   }, {
     "id" : "30",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "31",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "18",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "34",
+    "id" : "33",
     "type" : "owl:objectProperty"
   }, {
     "id" : "20",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "39",
+    "id" : "38",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "40",
+    "id" : "39",
     "type" : "owl:objectProperty"
   } ],
   "propertyAttribute" : [ {
@@ -412,16 +412,16 @@
         "value" : "https://w3id.org/con-tax/properties/cp",
         "type" : "iri"
       } ],
-      "rangeOrObjectIncludes" : [ {
-        "identifier" : "rangeOrObjectIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/2001/XMLSchema#integer",
-        "type" : "iri"
-      } ],
       "domainOrSubjectIncludes" : [ {
         "identifier" : "domainOrSubjectIncludes",
         "language" : "undefined",
         "value" : "https://w3id.org/bot#Zone",
+        "type" : "iri"
+      } ],
+      "rangeOrObjectIncludes" : [ {
+        "identifier" : "rangeOrObjectIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2001/XMLSchema#integer",
         "type" : "iri"
       } ]
     },
@@ -460,17 +460,17 @@
       "domainOrSubjectIncludes" : [ {
         "identifier" : "domainOrSubjectIncludes",
         "language" : "undefined",
-        "value" : "https://w3id.org/bot#Element",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainOrSubjectIncludes",
-        "language" : "undefined",
         "value" : "https://w3id.org/con-tax#ConstructionComponent",
         "type" : "iri"
       }, {
         "identifier" : "domainOrSubjectIncludes",
         "language" : "undefined",
         "value" : "https://w3id.org/bot#Zone",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainOrSubjectIncludes",
+        "language" : "undefined",
+        "value" : "https://w3id.org/bot#Element",
         "type" : "iri"
       } ],
       "rangeOrObjectIncludes" : [ {
@@ -537,6 +537,12 @@
         "value" : "https://w3id.org/con-tax/properties/cp",
         "type" : "iri"
       } ],
+      "domainOrSubjectIncludes" : [ {
+        "identifier" : "domainOrSubjectIncludes",
+        "language" : "undefined",
+        "value" : "https://w3id.org/cto#Task",
+        "type" : "iri"
+      } ],
       "rangeOrObjectIncludes" : [ {
         "identifier" : "rangeOrObjectIncludes",
         "language" : "undefined",
@@ -546,12 +552,6 @@
         "identifier" : "rangeOrObjectIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/2006/vcard/ns#Individual",
-        "type" : "iri"
-      } ],
-      "domainOrSubjectIncludes" : [ {
-        "identifier" : "domainOrSubjectIncludes",
-        "language" : "undefined",
-        "value" : "https://w3id.org/cto#Task",
         "type" : "iri"
       } ]
     },
@@ -586,17 +586,17 @@
       "domainOrSubjectIncludes" : [ {
         "identifier" : "domainOrSubjectIncludes",
         "language" : "undefined",
-        "value" : "https://w3id.org/bot#Element",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainOrSubjectIncludes",
-        "language" : "undefined",
         "value" : "https://w3id.org/bot#Zone",
         "type" : "iri"
       }, {
         "identifier" : "domainOrSubjectIncludes",
         "language" : "undefined",
         "value" : "https://w3id.org/con-tax#ConstructionComponent",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainOrSubjectIncludes",
+        "language" : "undefined",
+        "value" : "https://w3id.org/bot#Element",
         "type" : "iri"
       } ]
     },
@@ -625,12 +625,12 @@
       "rangeOrObjectIncludes" : [ {
         "identifier" : "rangeOrObjectIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/2006/vcard/ns#Organization",
+        "value" : "http://www.w3.org/2006/vcard/ns#Individual",
         "type" : "iri"
       }, {
         "identifier" : "rangeOrObjectIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/2006/vcard/ns#Individual",
+        "value" : "http://www.w3.org/2006/vcard/ns#Organization",
         "type" : "iri"
       } ],
       "domainOrSubjectIncludes" : [ {
@@ -662,6 +662,12 @@
         "value" : "https://w3id.org/con-tax/properties/cp",
         "type" : "iri"
       } ],
+      "rangeOrObjectIncludes" : [ {
+        "identifier" : "rangeOrObjectIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2001/XMLSchema#double",
+        "type" : "iri"
+      } ],
       "domainOrSubjectIncludes" : [ {
         "identifier" : "domainOrSubjectIncludes",
         "language" : "undefined",
@@ -671,12 +677,6 @@
         "identifier" : "domainOrSubjectIncludes",
         "language" : "undefined",
         "value" : "https://w3id.org/bot#Element",
-        "type" : "iri"
-      } ],
-      "rangeOrObjectIncludes" : [ {
-        "identifier" : "rangeOrObjectIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/2001/XMLSchema#double",
         "type" : "iri"
       } ]
     },
@@ -704,13 +704,14 @@
       } ]
     },
     "label" : {
-      "IRI-based" : "assessmentScore"
+      "IRI-based" : "assessmentScore",
+      "en" : "assessment score"
     },
     "domain" : "16",
     "comment" : {
-      "en" : "Property to connect a node representing an assessment (node with incoming cp:hasAssessment relation from an assessed object), towards its assessment score. More specific subproperties have to be defined in ontology extensions to specify the assessed aspect and the applied scoring system. Property inspired by Monumentenwacht reports and the DOT extension DASB."
+      "en" : "Property to connect a node representing an assessment node (cp:Assessment) with incoming cp:hasAssessment relation from an assessed object, towards its assessment score (literal). This property is made functional, meaning that each cp:Assessment instance node can only have one outgoing cp:assessmentScore. More specific subproperties have to be defined in ontology extensions to specify the assessed aspect and the applied scoring system. Property inspired by Monumentenwacht reports and the DOT extension DASB."
     },
-    "attributes" : [ "datatype" ],
+    "attributes" : [ "functional", "datatype" ],
     "id" : "15"
   }, {
     "iri" : "https://w3id.org/con-tax/properties/cp#relatedPersonOrOrganization",
@@ -723,22 +724,6 @@
         "value" : "https://w3id.org/con-tax/properties/cp",
         "type" : "iri"
       } ],
-      "domainOrSubjectIncludes" : [ {
-        "identifier" : "domainOrSubjectIncludes",
-        "language" : "undefined",
-        "value" : "https://w3id.org/cto#Task",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainOrSubjectIncludes",
-        "language" : "undefined",
-        "value" : "https://w3id.org/cto#TaskMethod",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainOrSubjectIncludes",
-        "language" : "undefined",
-        "value" : "https://w3id.org/bot#Zone",
-        "type" : "iri"
-      } ],
       "rangeOrObjectIncludes" : [ {
         "identifier" : "rangeOrObjectIncludes",
         "language" : "undefined",
@@ -748,6 +733,22 @@
         "identifier" : "rangeOrObjectIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/2006/vcard/ns#Individual",
+        "type" : "iri"
+      } ],
+      "domainOrSubjectIncludes" : [ {
+        "identifier" : "domainOrSubjectIncludes",
+        "language" : "undefined",
+        "value" : "https://w3id.org/cto#Task",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainOrSubjectIncludes",
+        "language" : "undefined",
+        "value" : "https://w3id.org/bot#Zone",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainOrSubjectIncludes",
+        "language" : "undefined",
+        "value" : "https://w3id.org/cto#TaskMethod",
         "type" : "iri"
       } ]
     },
@@ -809,16 +810,16 @@
         "value" : "https://w3id.org/con-tax/properties/cp",
         "type" : "iri"
       } ],
-      "domainOrSubjectIncludes" : [ {
-        "identifier" : "domainOrSubjectIncludes",
-        "language" : "undefined",
-        "value" : "https://w3id.org/dot#DamageElement",
-        "type" : "iri"
-      } ],
       "rangeOrObjectIncludes" : [ {
         "identifier" : "rangeOrObjectIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/2001/XMLSchema#double",
+        "type" : "iri"
+      } ],
+      "domainOrSubjectIncludes" : [ {
+        "identifier" : "domainOrSubjectIncludes",
+        "language" : "undefined",
+        "value" : "https://w3id.org/dot#DamageElement",
         "type" : "iri"
       } ]
     },
@@ -833,6 +834,17 @@
     },
     "attributes" : [ "object" ],
     "id" : "25"
+  }, {
+    "iri" : "https://w3id.org/con-tax#property_OP",
+    "baseIri" : "https://w3id.org/con-tax",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "property_OP"
+    },
+    "domain" : "1",
+    "subproperty" : [ "0", "3", "25", "26", "27", "28", "8", "29", "9", "30", "31", "32", "12", "33", "34", "35", "36", "37", "14", "38", "39", "23", "11" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "2"
   }, {
     "iri" : "https://w3id.org/con-tax/properties/cp#hasCeilingArea",
     "baseIri" : "https://w3id.org/con-tax/properties/cp",
@@ -861,24 +873,13 @@
       "IRI-based" : "hasCeilingArea",
       "en" : "has floor area"
     },
-    "superproperty" : [ "27" ],
+    "superproperty" : [ "29" ],
     "domain" : "1",
     "comment" : {
       "en" : "Quantitative property to indicate the ceiling area of a spatial building zone."
     },
     "attributes" : [ "object" ],
-    "id" : "26"
-  }, {
-    "iri" : "https://w3id.org/con-tax#property_OP",
-    "baseIri" : "https://w3id.org/con-tax",
-    "range" : "1",
-    "label" : {
-      "IRI-based" : "property_OP"
-    },
-    "domain" : "1",
-    "subproperty" : [ "0", "3", "25", "28", "29", "30", "8", "27", "9", "31", "32", "33", "12", "34", "35", "36", "37", "38", "14", "39", "40", "23", "11" ],
-    "attributes" : [ "external", "object" ],
-    "id" : "2"
+    "id" : "40"
   }, {
     "iri" : "https://w3id.org/con-tax/properties/cp#hasWallArea",
     "baseIri" : "https://w3id.org/con-tax/properties/cp",
@@ -890,16 +891,16 @@
         "value" : "https://w3id.org/con-tax/properties/cp",
         "type" : "iri"
       } ],
-      "rangeOrObjectIncludes" : [ {
-        "identifier" : "rangeOrObjectIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/2001/XMLSchema#double",
-        "type" : "iri"
-      } ],
       "domainOrSubjectIncludes" : [ {
         "identifier" : "domainOrSubjectIncludes",
         "language" : "undefined",
         "value" : "https://w3id.org/bot#Zone",
+        "type" : "iri"
+      } ],
+      "rangeOrObjectIncludes" : [ {
+        "identifier" : "rangeOrObjectIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2001/XMLSchema#double",
         "type" : "iri"
       } ]
     },
@@ -907,7 +908,7 @@
       "IRI-based" : "hasWallArea",
       "en" : "has floor area"
     },
-    "superproperty" : [ "27" ],
+    "superproperty" : [ "29" ],
     "domain" : "1",
     "comment" : {
       "en" : "Quantitative property to indicate the wall area of a spatial building zone."
@@ -928,12 +929,12 @@
       "domainOrSubjectIncludes" : [ {
         "identifier" : "domainOrSubjectIncludes",
         "language" : "undefined",
-        "value" : "https://w3id.org/bot#Interface",
+        "value" : "https://w3id.org/bot#Zone",
         "type" : "iri"
       }, {
         "identifier" : "domainOrSubjectIncludes",
         "language" : "undefined",
-        "value" : "https://w3id.org/bot#Zone",
+        "value" : "https://w3id.org/bot#Interface",
         "type" : "iri"
       } ],
       "rangeOrObjectIncludes" : [ {
@@ -949,12 +950,12 @@
     },
     "superproperty" : [ "2" ],
     "domain" : "1",
-    "subproperty" : [ "26", "41", "42" ],
+    "subproperty" : [ "40", "41", "42" ],
     "comment" : {
       "en" : "Quantitative property to indicate the area of a building interface (connection between building zones, between a building zone and a building element or between two building elements) or a spatial building zone."
     },
     "attributes" : [ "object" ],
-    "id" : "27"
+    "id" : "29"
   }, {
     "iri" : "https://w3id.org/con-tax/properties/cp#hasFloorArea",
     "baseIri" : "https://w3id.org/con-tax/properties/cp",
@@ -983,7 +984,7 @@
       "IRI-based" : "hasFloorArea",
       "en" : "has floor area"
     },
-    "superproperty" : [ "27" ],
+    "superproperty" : [ "29" ],
     "domain" : "1",
     "comment" : {
       "en" : "Quantitative property to indicate the floor area of a spatial building zone."
@@ -1004,17 +1005,17 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
+        "value" : "https://w3id.org/dot#Damage",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
         "value" : "https://w3id.org/bot#Zone",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "https://w3id.org/bot#Element",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "https://w3id.org/dot#Damage",
         "type" : "iri"
       } ]
     },
@@ -1024,7 +1025,7 @@
     },
     "domain" : "44",
     "comment" : {
-      "en" : "A property to connect an assessed object (construction component, spatial zone or damage) to an assessment node. The assessment node can be connected to (1) its assessment score(s) using (subproperties of) cp:assessmentScore and (2) the inspection context of the said assessment using cp:assessmentFromInspection. Property inspired by Monumentenwacht reports and the DOT extension DASB."
+      "en" : "A property to connect an assessed object (construction component, spatial zone or damage) to an assessment node. The assessment node can be connected to (1) its assessment score using (a subproperty of) cp:assessmentScore and (2) the inspection context of the said assessment using cp:assessmentFromInspection. Property inspired by Monumentenwacht reports and the DOT extension DASB."
     },
     "attributes" : [ "object" ],
     "id" : "43"
@@ -1056,7 +1057,7 @@
       "en" : "Quantitative property to indicate the specific mass (volumetric mass density) of a construction material. Property definition inspired by interviews with built heritage stakeholders."
     },
     "attributes" : [ "object" ],
-    "id" : "32"
+    "id" : "31"
   }, {
     "iri" : "https://w3id.org/con-tax/properties/cp#hasCrackWidth",
     "baseIri" : "https://w3id.org/con-tax/properties/cp",
@@ -1068,16 +1069,16 @@
         "value" : "https://w3id.org/con-tax/properties/cp",
         "type" : "iri"
       } ],
-      "rangeOrObjectIncludes" : [ {
-        "identifier" : "rangeOrObjectIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/2001/XMLSchema#double",
-        "type" : "iri"
-      } ],
       "domainOrSubjectIncludes" : [ {
         "identifier" : "domainOrSubjectIncludes",
         "language" : "undefined",
         "value" : "https://w3id.org/dot#DamageElement",
+        "type" : "iri"
+      } ],
+      "rangeOrObjectIncludes" : [ {
+        "identifier" : "rangeOrObjectIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2001/XMLSchema#double",
         "type" : "iri"
       } ]
     },
@@ -1091,7 +1092,7 @@
       "en" : "Quantitative property to indicate the width of crack (damage element). This property is inspired by the cdo:crackWidth property in the Concrete Damage Ontology (CDO) extension of DOT."
     },
     "attributes" : [ "object" ],
-    "id" : "33"
+    "id" : "32"
   }, {
     "iri" : "https://w3id.org/con-tax/properties/cp#hasExternalPart",
     "baseIri" : "https://w3id.org/con-tax/properties/cp",
@@ -1126,7 +1127,7 @@
       "en" : "Boolean property to indicate if a construction component has a part that is adjacent to the outdoor. Property definition inspired by interviews with built heritage stakeholders."
     },
     "attributes" : [ "object" ],
-    "id" : "37"
+    "id" : "36"
   }, {
     "iri" : "https://w3id.org/con-tax/properties/cp#hasOwner",
     "baseIri" : "https://w3id.org/con-tax/properties/cp",
@@ -1138,21 +1139,21 @@
         "value" : "https://w3id.org/con-tax/properties/cp",
         "type" : "iri"
       } ],
-      "rangeOrObjectIncludes" : [ {
-        "identifier" : "rangeOrObjectIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/2006/vcard/ns#Organization",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeOrObjectIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/2006/vcard/ns#Individual",
-        "type" : "iri"
-      } ],
       "domainOrSubjectIncludes" : [ {
         "identifier" : "domainOrSubjectIncludes",
         "language" : "undefined",
         "value" : "https://w3id.org/bot#Zone",
+        "type" : "iri"
+      } ],
+      "rangeOrObjectIncludes" : [ {
+        "identifier" : "rangeOrObjectIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2006/vcard/ns#Individual",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeOrObjectIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2006/vcard/ns#Organization",
         "type" : "iri"
       } ]
     },
@@ -1200,7 +1201,7 @@
       "en" : "Property to indicate the surface color of a construction component using a six digit hexadecimal code. Property definition inspired by interviews with built heritage stakeholders."
     },
     "attributes" : [ "object" ],
-    "id" : "29"
+    "id" : "27"
   }, {
     "iri" : "https://w3id.org/con-tax/properties/cp#hasHeight",
     "baseIri" : "https://w3id.org/con-tax/properties/cp",
@@ -1212,13 +1213,12 @@
         "value" : "https://w3id.org/con-tax/properties/cp",
         "type" : "iri"
       } ],
-      "rangeOrObjectIncludes" : [ {
-        "identifier" : "rangeOrObjectIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/2001/XMLSchema#double",
-        "type" : "iri"
-      } ],
       "domainOrSubjectIncludes" : [ {
+        "identifier" : "domainOrSubjectIncludes",
+        "language" : "undefined",
+        "value" : "https://w3id.org/bot#Zone",
+        "type" : "iri"
+      }, {
         "identifier" : "domainOrSubjectIncludes",
         "language" : "undefined",
         "value" : "https://w3id.org/con-tax#ConstructionComponent",
@@ -1228,10 +1228,11 @@
         "language" : "undefined",
         "value" : "https://w3id.org/bot#Element",
         "type" : "iri"
-      }, {
-        "identifier" : "domainOrSubjectIncludes",
+      } ],
+      "rangeOrObjectIncludes" : [ {
+        "identifier" : "rangeOrObjectIncludes",
         "language" : "undefined",
-        "value" : "https://w3id.org/bot#Zone",
+        "value" : "http://www.w3.org/2001/XMLSchema#double",
         "type" : "iri"
       } ]
     },
@@ -1245,29 +1246,7 @@
       "en" : "Quantitative property to indicate the height of a spatial building zone or a construction component. E.g. the height of a building space is equal to the distance between the floor and the ceiling."
     },
     "attributes" : [ "object" ],
-    "id" : "28"
-  }, {
-    "iri" : "https://w3id.org/con-tax/properties/cp#assessmentFromInspection",
-    "baseIri" : "https://w3id.org/con-tax/properties/cp",
-    "range" : "24",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/con-tax/properties/cp",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "assessmentFromInspection",
-      "en" : "assessment from inspection"
-    },
-    "domain" : "47",
-    "comment" : {
-      "en" : "Additional property to connect an assessment node (between an assessed object and the assessed value) to the related inspection. It can be considered metadata for the assessment. Property inspired by Monumentenwacht reports and the DOT extension DASB."
-    },
-    "attributes" : [ "object" ],
-    "id" : "48"
+    "id" : "26"
   }, {
     "iri" : "https://w3id.org/con-tax/properties/cp#hasJanitor",
     "baseIri" : "https://w3id.org/con-tax/properties/cp",
@@ -1319,17 +1298,6 @@
         "value" : "https://w3id.org/con-tax/properties/cp",
         "type" : "iri"
       } ],
-      "rangeOrObjectIncludes" : [ {
-        "identifier" : "rangeOrObjectIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/2006/vcard/ns#Individual",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeOrObjectIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/2006/vcard/ns#Organization",
-        "type" : "iri"
-      } ],
       "domainOrSubjectIncludes" : [ {
         "identifier" : "domainOrSubjectIncludes",
         "language" : "undefined",
@@ -1339,6 +1307,17 @@
         "identifier" : "domainOrSubjectIncludes",
         "language" : "undefined",
         "value" : "https://w3id.org/cto#Task",
+        "type" : "iri"
+      } ],
+      "rangeOrObjectIncludes" : [ {
+        "identifier" : "rangeOrObjectIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2006/vcard/ns#Individual",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeOrObjectIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2006/vcard/ns#Organization",
         "type" : "iri"
       } ]
     },
@@ -1354,6 +1333,28 @@
     "attributes" : [ "object" ],
     "id" : "21"
   }, {
+    "iri" : "https://w3id.org/con-tax/properties/cp#assessmentFromInspection",
+    "baseIri" : "https://w3id.org/con-tax/properties/cp",
+    "range" : "24",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/con-tax/properties/cp",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "assessmentFromInspection",
+      "en" : "assessment from inspection"
+    },
+    "domain" : "47",
+    "comment" : {
+      "en" : "Additional property to connect an assessment node (between an assessed object and the assessed value) to the related inspection. It can be considered metadata for the assessment. Property inspired by Monumentenwacht reports and the DOT extension DASB."
+    },
+    "attributes" : [ "object" ],
+    "id" : "48"
+  }, {
     "iri" : "https://w3id.org/con-tax/properties/cp#hasMaterialPart",
     "baseIri" : "https://w3id.org/con-tax/properties/cp",
     "range" : "1",
@@ -1362,12 +1363,6 @@
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "https://w3id.org/con-tax/properties/cp",
-        "type" : "iri"
-      } ],
-      "rangeOrObjectIncludes" : [ {
-        "identifier" : "rangeOrObjectIncludes",
-        "language" : "undefined",
-        "value" : "https://w3id.org/con-tax#Material",
         "type" : "iri"
       } ],
       "domainOrSubjectIncludes" : [ {
@@ -1379,6 +1374,12 @@
         "identifier" : "domainOrSubjectIncludes",
         "language" : "undefined",
         "value" : "https://w3id.org/bot#Element",
+        "type" : "iri"
+      } ],
+      "rangeOrObjectIncludes" : [ {
+        "identifier" : "rangeOrObjectIncludes",
+        "language" : "undefined",
+        "value" : "https://w3id.org/con-tax#Material",
         "type" : "iri"
       } ]
     },
@@ -1392,7 +1393,7 @@
       "en" : "Property to connect a construction component to a node that represents a certain specified material (instance node classified using a subclass of contax:Material). Note that the material instance node can have its own situation-specific properties, such as volume, mass and measured material properties. Property definition inspired by interviews with built heritage stakeholders."
     },
     "attributes" : [ "object" ],
-    "id" : "36"
+    "id" : "35"
   }, {
     "iri" : "https://w3id.org/con-tax/properties/cp#hasDamageSurfaceSize",
     "baseIri" : "https://w3id.org/con-tax/properties/cp",
@@ -1427,7 +1428,7 @@
       "en" : "Quantitative property to indicate the surface size of a dot:DamageArea, e.g. concrete spalling or (surface) deterioration by mould. This property is inspired by the cdo:spallingArea property in the Concrete Damage Ontology (CDO) extension of DOT."
     },
     "attributes" : [ "object" ],
-    "id" : "35"
+    "id" : "34"
   }, {
     "iri" : "https://w3id.org/con-tax/properties/cp#hasVolume",
     "baseIri" : "https://w3id.org/con-tax/properties/cp",
@@ -1472,7 +1473,7 @@
       "en" : "Quantitative property to indicate the volume of a spatial building zone or a construction component."
     },
     "attributes" : [ "object" ],
-    "id" : "38"
+    "id" : "37"
   }, {
     "iri" : "https://w3id.org/con-tax/properties/cp#hasDamageVolumeSize",
     "baseIri" : "https://w3id.org/con-tax/properties/cp",
@@ -1507,7 +1508,7 @@
       "en" : "Quantitative property to indicate the volume size of a dot:DamageArea, e.g. a concrete spalling or deterioration by mould. This property is inspired by the cdo:spallingArea property in the Concrete Damage Ontology (CDO) extension of DOT."
     },
     "attributes" : [ "object" ],
-    "id" : "30"
+    "id" : "28"
   }, {
     "iri" : "https://w3id.org/con-tax/properties/cp#materialToughness",
     "baseIri" : "https://w3id.org/con-tax/properties/cp",
@@ -1542,7 +1543,7 @@
       "en" : "Quantitative property to indicate the toughness of a construction material. Property definition inspired by interviews with built heritage stakeholders."
     },
     "attributes" : [ "object" ],
-    "id" : "31"
+    "id" : "30"
   }, {
     "iri" : "https://w3id.org/con-tax/properties/cp#hasTenant",
     "baseIri" : "https://w3id.org/con-tax/properties/cp",
@@ -1563,12 +1564,12 @@
       "rangeOrObjectIncludes" : [ {
         "identifier" : "rangeOrObjectIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/2006/vcard/ns#Individual",
+        "value" : "http://www.w3.org/2006/vcard/ns#Organization",
         "type" : "iri"
       }, {
         "identifier" : "rangeOrObjectIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/2006/vcard/ns#Organization",
+        "value" : "http://www.w3.org/2006/vcard/ns#Individual",
         "type" : "iri"
       } ]
     },
@@ -1594,21 +1595,21 @@
         "value" : "https://w3id.org/con-tax/properties/cp",
         "type" : "iri"
       } ],
-      "domainOrSubjectIncludes" : [ {
-        "identifier" : "domainOrSubjectIncludes",
-        "language" : "undefined",
-        "value" : "https://w3id.org/con-tax#Material",
-        "type" : "iri"
-      } ],
       "rangeOrObjectIncludes" : [ {
         "identifier" : "rangeOrObjectIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/2001/XMLSchema#double",
+        "value" : "http://www.w3.org/2001/XMLSchema#integer",
         "type" : "iri"
       }, {
         "identifier" : "rangeOrObjectIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/2001/XMLSchema#integer",
+        "value" : "http://www.w3.org/2001/XMLSchema#double",
+        "type" : "iri"
+      } ],
+      "domainOrSubjectIncludes" : [ {
+        "identifier" : "domainOrSubjectIncludes",
+        "language" : "undefined",
+        "value" : "https://w3id.org/con-tax#Material",
         "type" : "iri"
       } ]
     },
@@ -1622,7 +1623,7 @@
       "en" : "Quantitative property to indicate the hardness (Mohs scale) of a construction material. Property definition inspired by interviews with built heritage stakeholders."
     },
     "attributes" : [ "object" ],
-    "id" : "34"
+    "id" : "33"
   }, {
     "iri" : "https://w3id.org/con-tax/properties/cp#hasUser",
     "baseIri" : "https://w3id.org/con-tax/properties/cp",
@@ -1634,12 +1635,6 @@
         "value" : "https://w3id.org/con-tax/properties/cp",
         "type" : "iri"
       } ],
-      "domainOrSubjectIncludes" : [ {
-        "identifier" : "domainOrSubjectIncludes",
-        "language" : "undefined",
-        "value" : "https://w3id.org/bot#Zone",
-        "type" : "iri"
-      } ],
       "rangeOrObjectIncludes" : [ {
         "identifier" : "rangeOrObjectIncludes",
         "language" : "undefined",
@@ -1649,6 +1644,12 @@
         "identifier" : "rangeOrObjectIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/2006/vcard/ns#Individual",
+        "type" : "iri"
+      } ],
+      "domainOrSubjectIncludes" : [ {
+        "identifier" : "domainOrSubjectIncludes",
+        "language" : "undefined",
+        "value" : "https://w3id.org/bot#Zone",
         "type" : "iri"
       } ]
     },
@@ -1674,16 +1675,16 @@
         "value" : "https://w3id.org/con-tax/properties/cp",
         "type" : "iri"
       } ],
-      "rangeOrObjectIncludes" : [ {
-        "identifier" : "rangeOrObjectIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/2001/XMLSchema#double",
-        "type" : "iri"
-      } ],
       "domainOrSubjectIncludes" : [ {
         "identifier" : "domainOrSubjectIncludes",
         "language" : "undefined",
         "value" : "https://w3id.org/dot#DamageElement",
+        "type" : "iri"
+      } ],
+      "rangeOrObjectIncludes" : [ {
+        "identifier" : "rangeOrObjectIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2001/XMLSchema#double",
         "type" : "iri"
       } ]
     },
@@ -1697,7 +1698,7 @@
       "en" : "Quantitative property to indicate the length of a crack (damage element). It corresponds with the distance along the crack. This property is inspired by the cdo:crackLengthproperty in the Concrete Damage Ontology (CDO) extension of DOT."
     },
     "attributes" : [ "object" ],
-    "id" : "39"
+    "id" : "38"
   }, {
     "iri" : "https://w3id.org/con-tax/properties/cp#materialCompressiveStrength",
     "baseIri" : "https://w3id.org/con-tax/properties/cp",
@@ -1732,6 +1733,6 @@
       "en" : "Quantitative property to indicate the compressive strength of a construction material. Property definition inspired by interviews with built heritage stakeholders."
     },
     "attributes" : [ "object" ],
-    "id" : "40"
+    "id" : "39"
   } ]
 }

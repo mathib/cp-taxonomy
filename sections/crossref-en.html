@@ -16,7 +16,7 @@ This section provides details for each class and property defined by Constructio
       <p>
          <strong>IRI:</strong> https://w3id.org/con-tax/properties/cp#Assessment</p>
       <div class="comment">
-         <span class="markdown">An instance of cp:Assessment represents an assessment related to a certain construction-related object (building, bridge, space, component, etc.), connected with the cp:hasAssessment property. Starting from an assessment node, one or more assessment parameters can be connected.</span>
+         <span class="markdown">An instance of cp:Assessment represents an assessment related to a certain construction-related object (building, bridge, space, component, etc.), connected with the cp:hasAssessment property. Starting from an assessment node, one assessment score (cp:assessmentScore or subproperties) relation can be connected to link to the scoring value.</span>
       </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
@@ -323,7 +323,7 @@ This section provides details for each class and property defined by Constructio
       <p>
          <strong>IRI:</strong> https://w3id.org/con-tax/properties/cp#hasAssessment</p>
       <div class="comment">
-         <span class="markdown">A property to connect an assessed object (construction component, spatial zone or damage) to an assessment node. The assessment node can be connected to (1) its assessment score(s) using (subproperties of) cp:assessmentScore and (2) the inspection context of the said assessment using cp:assessmentFromInspection. Property inspired by Monumentenwacht reports and the DOT extension DASB.</span>
+         <span class="markdown">A property to connect an assessed object (construction component, spatial zone or damage) to an assessment node. The assessment node can be connected to (1) its assessment score using (a subproperty of) cp:assessmentScore and (2) the inspection context of the said assessment using cp:assessmentFromInspection. Property inspired by Monumentenwacht reports and the DOT extension DASB.</span>
       </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
@@ -1134,9 +1134,7 @@ This section provides details for each class and property defined by Constructio
    <ul class="hlist">
       <li>
          <a href="#assessmentScore"
-            title="https://w3id.org/con-tax/properties/cp#assessmentScore">
-            <span>assessment score</span>
-         </a>
+            title="https://w3id.org/con-tax/properties/cp#assessmentScore">assessment score</a>
       </li>
    </ul>
    <div class="entity" id="assessmentScore">
@@ -1147,7 +1145,7 @@ This section provides details for each class and property defined by Constructio
       <p>
          <strong>IRI:</strong> https://w3id.org/con-tax/properties/cp#assessmentScore</p>
       <div class="comment">
-         <span class="markdown">Property to connect a node representing an assessment (node with incoming cp:hasAssessment relation from an assessed object), towards its assessment score. More specific subproperties have to be defined in ontology extensions to specify the assessed aspect and the applied scoring system. Property inspired by Monumentenwacht reports and the DOT extension DASB.</span>
+         <span class="markdown">Property to connect a node representing an assessment node (cp:Assessment) with incoming cp:hasAssessment relation from an assessed object, towards its assessment score (literal). This property is made functional, meaning that each cp:Assessment instance node can only have one outgoing cp:assessmentScore. More specific subproperties have to be defined in ontology extensions to specify the assessed aspect and the applied scoring system. Property inspired by Monumentenwacht reports and the DOT extension DASB.</span>
       </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
@@ -1156,12 +1154,9 @@ This section provides details for each class and property defined by Constructio
          </dd>
       </dl>
       <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
          <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <span class="dotted" title="https://w3id.org/con-tax#property_DP">property d p</span>
-               <sup class="type-dp" title="data property">dp</sup>
-            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#Assessment"
@@ -1170,30 +1165,6 @@ This section provides details for each class and property defined by Constructio
             </dd>
          </dl>
       </div>
-   </div>
-</div><div id="namedindividuals">
-   <h3 id="namedindividuals" class="list">Named Individuals</h3>
-   <ul class="hlist">
-      <li>
-         <a href="#" title="https://w3id.org/con-tax/properties/cp">
-            <span>cp</span>
-         </a>
-      </li>
-   </ul>
-   <div class="entity" id="">
-      <h3>cp<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/con-tax/properties/cp</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <span class="dotted" title="http://purl.org/vocommons/voaf#Vocabulary">vocabulary</span>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
    </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>

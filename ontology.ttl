@@ -2,7 +2,6 @@
 # prefix: cp
 
 @prefix : <https://w3id.org/con-tax/properties/cp#> .
-@prefix aat: <http://vocab.getty.edu/aat/> .
 @prefix bot: <https://w3id.org/bot#> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix contax: <https://w3id.org/con-tax#> .
@@ -10,20 +9,14 @@
 @prefix cto: <https://w3id.org/cto#> .
 @prefix dbr: <http://dbpedia.org/resource/> .
 @prefix dct: <http://purl.org/dc/terms/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dot: <https://w3id.org/dot#> .
-@prefix gvp: <http://vocab.getty.edu/ontology#> .
-@prefix iso-thes: <http://purl.org/iso25964/skos-thes#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix voaf: <http://purl.org/vocommons/voaf#> .
-@prefix wd: <http://www.wikidata.org/entity/> .
-@prefix xl: <http://www.w3.org/2008/05/skos-xl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 schema:domainIncludes
@@ -45,7 +38,7 @@ contax:property_OP
   rdf:type voaf:Vocabulary ;
   rdf:type owl:Ontology ;
   cc:license <https://creativecommons.org/licenses/by/4.0/> ;
-  dcterms:creator [
+  dct:creator [
       rdf:type vcard:Individual ;
       vcard:family-name "Bonduel" ;
       vcard:fn "Mathias Bonduel" ;
@@ -60,9 +53,9 @@ contax:property_OP
       vcard:hasURL <https://www.kuleuven.be/wieiswie/nl/person/00110827> ;
       vcard:hasURL <https://www.researchgate.net/profile/Mathias_Bonduel> ;
     ] ;
-  dcterms:description "A set of properties that can be used to describe aspects related to general construction components, spatial building zones, materials,  building interfaces, damages, assessments and tasks."@en ;
-  dcterms:issued "2020-11-30"^^xsd:date ;
-  dcterms:title "Construction Properties (CP) taxonomy"@en ;
+  dct:description "A set of properties that can be used to describe aspects related to general construction components, spatial building zones, materials,  building interfaces, damages, assessments and tasks. Besides two taxonomies of general properties, extending resp. contax:property_OP and contax:property_DP, it also contains terminology for the more specific patterns related to construction assessments."@en ;
+  dct:issued "2020-12-19"^^xsd:date ;
+  dct:title "Construction Properties (CP) taxonomy"@en ;
   vann:preferredNamespacePrefix "cp" ;
   vann:preferredNamespaceUri "https://w3id.org/con-tax/properties/cp#" ;
   rdfs:comment "- Version 0.0.1: initial version"@en ;
@@ -70,7 +63,7 @@ contax:property_OP
 .
 cp:Assessment
   rdf:type owl:Class ;
-  rdfs:comment "An instance of cp:Assessment represents an assessment related to a certain construction-related object (building, bridge, space, component, etc.), connected with the cp:hasAssessment property. Starting from an assessment node, one or more assessment parameters can be connected."@en ;
+  rdfs:comment "An instance of cp:Assessment represents an assessment related to a certain construction-related object (building, bridge, space, component, etc.), connected with the cp:hasAssessment property. Starting from an assessment node, one assessment score (cp:assessmentScore or subproperties) relation can be connected to link to the scoring value."@en ;
   rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
   rdfs:label "assessment "@en ;
 .
@@ -83,10 +76,11 @@ cp:assessmentFromInspection
 .
 cp:assessmentScore
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "Property to connect a node representing an assessment (node with incoming cp:hasAssessment relation from an assessed object), towards its assessment score. More specific subproperties have to be defined in ontology extensions to specify the assessed aspect and the applied scoring system. Property inspired by Monumentenwacht reports and the DOT extension DASB."@en ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment "Property to connect a node representing an assessment node (cp:Assessment) with incoming cp:hasAssessment relation from an assessed object, towards its assessment score (literal). This property is made functional, meaning that each cp:Assessment instance node can only have one outgoing cp:assessmentScore. More specific subproperties have to be defined in ontology extensions to specify the assessed aspect and the applied scoring system. Property inspired by Monumentenwacht reports and the DOT extension DASB."@en ;
   rdfs:domain cp:Assessment ;
   rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
-  rdfs:subPropertyOf contax:property_DP ;
+  rdfs:label "assessment score"@en ;
 .
 cp:countedVisitors
   rdf:type owl:ObjectProperty ;
@@ -123,7 +117,7 @@ cp:hasAssessment
   schema:domainIncludes bot:Element ;
   schema:domainIncludes bot:Zone ;
   schema:domainIncludes dot:Damage ;
-  rdfs:comment "A property to connect an assessed object (construction component, spatial zone or damage) to an assessment node. The assessment node can be connected to (1) its assessment score(s) using (subproperties of) cp:assessmentScore and (2) the inspection context of the said assessment using cp:assessmentFromInspection. Property inspired by Monumentenwacht reports and the DOT extension DASB."@en ;
+  rdfs:comment "A property to connect an assessed object (construction component, spatial zone or damage) to an assessment node. The assessment node can be connected to (1) its assessment score using (a subproperty of) cp:assessmentScore and (2) the inspection context of the said assessment using cp:assessmentFromInspection. Property inspired by Monumentenwacht reports and the DOT extension DASB."@en ;
   rdfs:isDefinedBy <https://w3id.org/con-tax/properties/cp> ;
   rdfs:label "has assessment"@en ;
   rdfs:range cp:Assessment ;

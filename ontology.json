@@ -109,11 +109,11 @@
   } ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
-    "@value" : "A set of properties that can be used to describe aspects related to general construction components, spatial building zones, materials,  building interfaces, damages, assessments and tasks."
+    "@value" : "A set of properties that can be used to describe aspects related to general construction components, spatial building zones, materials,  building interfaces, damages, assessments and tasks. Besides two taxonomies of general properties, extending resp. contax:property_OP and contax:property_DP, it also contains terminology for the more specific patterns related to construction assessments."
   } ],
   "http://purl.org/dc/terms/issued" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2020-11-30"
+    "@value" : "2020-12-19"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -137,7 +137,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "An instance of cp:Assessment represents an assessment related to a certain construction-related object (building, bridge, space, component, etc.), connected with the cp:hasAssessment property. Starting from an assessment node, one or more assessment parameters can be connected."
+    "@value" : "An instance of cp:Assessment represents an assessment related to a certain construction-related object (building, bridge, space, component, etc.), connected with the cp:hasAssessment property. Starting from an assessment node, one assessment score (cp:assessmentScore or subproperties) relation can be connected to link to the scoring value."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/con-tax/properties/cp"
@@ -165,10 +165,10 @@
   } ]
 }, {
   "@id" : "https://w3id.org/con-tax/properties/cp#assessmentScore",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Property to connect a node representing an assessment (node with incoming cp:hasAssessment relation from an assessed object), towards its assessment score. More specific subproperties have to be defined in ontology extensions to specify the assessed aspect and the applied scoring system. Property inspired by Monumentenwacht reports and the DOT extension DASB."
+    "@value" : "Property to connect a node representing an assessment node (cp:Assessment) with incoming cp:hasAssessment relation from an assessed object, towards its assessment score (literal). This property is made functional, meaning that each cp:Assessment instance node can only have one outgoing cp:assessmentScore. More specific subproperties have to be defined in ontology extensions to specify the assessed aspect and the applied scoring system. Property inspired by Monumentenwacht reports and the DOT extension DASB."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/con-tax/properties/cp#Assessment"
@@ -176,8 +176,9 @@
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/con-tax/properties/cp"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/con-tax#property_DP"
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "assessment score"
   } ]
 }, {
   "@id" : "https://w3id.org/con-tax/properties/cp#countedVisitors",
@@ -266,7 +267,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A property to connect an assessed object (construction component, spatial zone or damage) to an assessment node. The assessment node can be connected to (1) its assessment score(s) using (subproperties of) cp:assessmentScore and (2) the inspection context of the said assessment using cp:assessmentFromInspection. Property inspired by Monumentenwacht reports and the DOT extension DASB."
+    "@value" : "A property to connect an assessed object (construction component, spatial zone or damage) to an assessment node. The assessment node can be connected to (1) its assessment score using (a subproperty of) cp:assessmentScore and (2) the inspection context of the said assessment using cp:assessmentFromInspection. Property inspired by Monumentenwacht reports and the DOT extension DASB."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/con-tax/properties/cp"

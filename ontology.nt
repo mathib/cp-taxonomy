@@ -14,8 +14,8 @@ _:genid2 <http://www.w3.org/2006/vcard/ns#organization-name> "KU Leuven" .
 _:genid1 <http://www.w3.org/2006/vcard/ns#hasURL> <https://orcid.org/0000-0002-3313-924X> .
 _:genid1 <http://www.w3.org/2006/vcard/ns#hasURL> <https://www.kuleuven.be/wieiswie/nl/person/00110827> .
 _:genid1 <http://www.w3.org/2006/vcard/ns#hasURL> <https://www.researchgate.net/profile/Mathias_Bonduel> .
-<https://w3id.org/con-tax/properties/cp> <http://purl.org/dc/terms/description> "A set of properties that can be used to describe aspects related to general construction components, spatial building zones, materials,  building interfaces, damages, assessments and tasks."@en .
-<https://w3id.org/con-tax/properties/cp> <http://purl.org/dc/terms/issued> "2020-11-30"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/con-tax/properties/cp> <http://purl.org/dc/terms/description> "A set of properties that can be used to describe aspects related to general construction components, spatial building zones, materials,  building interfaces, damages, assessments and tasks. Besides two taxonomies of general properties, extending resp. contax:property_OP and contax:property_DP, it also contains terminology for the more specific patterns related to construction assessments."@en .
+<https://w3id.org/con-tax/properties/cp> <http://purl.org/dc/terms/issued> "2020-12-19"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/con-tax/properties/cp> <http://purl.org/dc/terms/title> "Construction Properties (CP) taxonomy"@en .
 <https://w3id.org/con-tax/properties/cp> <http://purl.org/vocab/vann/preferredNamespacePrefix> "cp" .
 <https://w3id.org/con-tax/properties/cp> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/con-tax/properties/cp#" .
@@ -133,7 +133,7 @@ _:genid1 <http://www.w3.org/2006/vcard/ns#hasURL> <https://www.researchgate.net/
 <https://w3id.org/con-tax/properties/cp#hasAssessment> <http://schema.org/domainIncludes> <https://w3id.org/bot#Element> .
 <https://w3id.org/con-tax/properties/cp#hasAssessment> <http://schema.org/domainIncludes> <https://w3id.org/bot#Zone> .
 <https://w3id.org/con-tax/properties/cp#hasAssessment> <http://schema.org/domainIncludes> <https://w3id.org/dot#Damage> .
-<https://w3id.org/con-tax/properties/cp#hasAssessment> <http://www.w3.org/2000/01/rdf-schema#comment> "A property to connect an assessed object (construction component, spatial zone or damage) to an assessment node. The assessment node can be connected to (1) its assessment score(s) using (subproperties of) cp:assessmentScore and (2) the inspection context of the said assessment using cp:assessmentFromInspection. Property inspired by Monumentenwacht reports and the DOT extension DASB."@en .
+<https://w3id.org/con-tax/properties/cp#hasAssessment> <http://www.w3.org/2000/01/rdf-schema#comment> "A property to connect an assessed object (construction component, spatial zone or damage) to an assessment node. The assessment node can be connected to (1) its assessment score using (a subproperty of) cp:assessmentScore and (2) the inspection context of the said assessment using cp:assessmentFromInspection. Property inspired by Monumentenwacht reports and the DOT extension DASB."@en .
 <https://w3id.org/con-tax/properties/cp#hasAssessment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
 <https://w3id.org/con-tax/properties/cp#hasAssessment> <http://www.w3.org/2000/01/rdf-schema#label> "has assessment"@en .
 # 
@@ -440,10 +440,11 @@ _:genid1 <http://www.w3.org/2006/vcard/ns#hasURL> <https://www.researchgate.net/
 # 
 # https://w3id.org/con-tax/properties/cp#assessmentScore
 <https://w3id.org/con-tax/properties/cp#assessmentScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/con-tax/properties/cp#assessmentScore> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/con-tax#property_DP> .
+<https://w3id.org/con-tax/properties/cp#assessmentScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/con-tax/properties/cp#assessmentScore> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/con-tax/properties/cp#Assessment> .
-<https://w3id.org/con-tax/properties/cp#assessmentScore> <http://www.w3.org/2000/01/rdf-schema#comment> "Property to connect a node representing an assessment (node with incoming cp:hasAssessment relation from an assessed object), towards its assessment score. More specific subproperties have to be defined in ontology extensions to specify the assessed aspect and the applied scoring system. Property inspired by Monumentenwacht reports and the DOT extension DASB."@en .
+<https://w3id.org/con-tax/properties/cp#assessmentScore> <http://www.w3.org/2000/01/rdf-schema#comment> "Property to connect a node representing an assessment node (cp:Assessment) with incoming cp:hasAssessment relation from an assessed object, towards its assessment score (literal). This property is made functional, meaning that each cp:Assessment instance node can only have one outgoing cp:assessmentScore. More specific subproperties have to be defined in ontology extensions to specify the assessed aspect and the applied scoring system. Property inspired by Monumentenwacht reports and the DOT extension DASB."@en .
 <https://w3id.org/con-tax/properties/cp#assessmentScore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
+<https://w3id.org/con-tax/properties/cp#assessmentScore> <http://www.w3.org/2000/01/rdf-schema#label> "assessment score"@en .
 # 
 # 
 # 
@@ -469,7 +470,7 @@ _:genid1 <http://www.w3.org/2006/vcard/ns#hasURL> <https://www.researchgate.net/
 # 
 # https://w3id.org/con-tax/properties/cp#Assessment
 <https://w3id.org/con-tax/properties/cp#Assessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/con-tax/properties/cp#Assessment> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance of cp:Assessment represents an assessment related to a certain construction-related object (building, bridge, space, component, etc.), connected with the cp:hasAssessment property. Starting from an assessment node, one or more assessment parameters can be connected."@en .
+<https://w3id.org/con-tax/properties/cp#Assessment> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance of cp:Assessment represents an assessment related to a certain construction-related object (building, bridge, space, component, etc.), connected with the cp:hasAssessment property. Starting from an assessment node, one assessment score (cp:assessmentScore or subproperties) relation can be connected to link to the scoring value."@en .
 <https://w3id.org/con-tax/properties/cp#Assessment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax/properties/cp> .
 <https://w3id.org/con-tax/properties/cp#Assessment> <http://www.w3.org/2000/01/rdf-schema#label> "assessment "@en .
 # 

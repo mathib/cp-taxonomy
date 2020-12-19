@@ -15,8 +15,8 @@
     <owl:Ontology rdf:about="https://w3id.org/con-tax/properties/cp">
         <ns1:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:creator rdf:nodeID="genid1"/>
-        <terms:description xml:lang="en">A set of properties that can be used to describe aspects related to general construction components, spatial building zones, materials,  building interfaces, damages, assessments and tasks.</terms:description>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-30</terms:issued>
+        <terms:description xml:lang="en">A set of properties that can be used to describe aspects related to general construction components, spatial building zones, materials,  building interfaces, damages, assessments and tasks. Besides two taxonomies of general properties, extending resp. contax:property_OP and contax:property_DP, it also contains terminology for the more specific patterns related to construction assessments.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-12-19</terms:issued>
         <terms:title xml:lang="en">Construction Properties (CP) taxonomy</terms:title>
         <vann:preferredNamespacePrefix>cp</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/con-tax/properties/cp#</vann:preferredNamespaceUri>
@@ -249,7 +249,7 @@
         <schema:domainIncludes rdf:resource="https://w3id.org/bot#Element"/>
         <schema:domainIncludes rdf:resource="https://w3id.org/bot#Zone"/>
         <schema:domainIncludes rdf:resource="https://w3id.org/dot#Damage"/>
-        <rdfs:comment xml:lang="en">A property to connect an assessed object (construction component, spatial zone or damage) to an assessment node. The assessment node can be connected to (1) its assessment score(s) using (subproperties of) cp:assessmentScore and (2) the inspection context of the said assessment using cp:assessmentFromInspection. Property inspired by Monumentenwacht reports and the DOT extension DASB.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A property to connect an assessed object (construction component, spatial zone or damage) to an assessment node. The assessment node can be connected to (1) its assessment score using (a subproperty of) cp:assessmentScore and (2) the inspection context of the said assessment using cp:assessmentFromInspection. Property inspired by Monumentenwacht reports and the DOT extension DASB.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/con-tax/properties/cp"/>
         <rdfs:label xml:lang="en">has assessment</rdfs:label>
     </owl:ObjectProperty>
@@ -718,10 +718,11 @@
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/con-tax/properties/cp#assessmentScore">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/con-tax#property_DP"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/con-tax/properties/cp#Assessment"/>
-        <rdfs:comment xml:lang="en">Property to connect a node representing an assessment (node with incoming cp:hasAssessment relation from an assessed object), towards its assessment score. More specific subproperties have to be defined in ontology extensions to specify the assessed aspect and the applied scoring system. Property inspired by Monumentenwacht reports and the DOT extension DASB.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Property to connect a node representing an assessment node (cp:Assessment) with incoming cp:hasAssessment relation from an assessed object, towards its assessment score (literal). This property is made functional, meaning that each cp:Assessment instance node can only have one outgoing cp:assessmentScore. More specific subproperties have to be defined in ontology extensions to specify the assessed aspect and the applied scoring system. Property inspired by Monumentenwacht reports and the DOT extension DASB.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/con-tax/properties/cp"/>
+        <rdfs:label xml:lang="en">assessment score</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -777,7 +778,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/con-tax/properties/cp#Assessment">
-        <rdfs:comment xml:lang="en">An instance of cp:Assessment represents an assessment related to a certain construction-related object (building, bridge, space, component, etc.), connected with the cp:hasAssessment property. Starting from an assessment node, one or more assessment parameters can be connected.</rdfs:comment>
+        <rdfs:comment xml:lang="en">An instance of cp:Assessment represents an assessment related to a certain construction-related object (building, bridge, space, component, etc.), connected with the cp:hasAssessment property. Starting from an assessment node, one assessment score (cp:assessmentScore or subproperties) relation can be connected to link to the scoring value.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/con-tax/properties/cp"/>
         <rdfs:label xml:lang="en">assessment </rdfs:label>
     </owl:Class>
